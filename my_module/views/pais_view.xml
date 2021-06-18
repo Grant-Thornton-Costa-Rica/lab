@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- <record id="view_tree_pais" model="ir.ui.view">
+    <record id="view_tree_pais" model="ir.ui.view">
         <field name="name">view.tree.pais</field>
         <field name="model">m.pais</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="nombre" />
+                <field name="nombre" attrs="{'required':[('other_field','=',other_value')]}" />
+                <field name="other_field" invisible="1" />
+                <field name="create_date" />
+                <field name="create_uid" />
+                <field name="write_date" />
+                <field name="write_uid" />
             </tree>    
-        </field>
-    </record> -->
-
-    <record id="view_form_pais" model="ir.ui.view">
-        <field name="name">view.form.pais</field>
-        <field name="model">m.pais</field>
-        <field name="arch" type="xml">
-            <form string="">
-                <sheet>
-                    <group>
-                        <field name="nombre" />
-                    </group>
-                </sheet>
-            </form>
         </field>
     </record>
 

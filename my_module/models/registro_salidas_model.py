@@ -1,8 +1,6 @@
 import logging
 from odoo import models, fields, api
 
-_logger = logging.getLoger(__name__)
-
 class Registro_Salidas_Pais_Model(models.Model):
     _name = 'm.registro_salidas_pais'
 

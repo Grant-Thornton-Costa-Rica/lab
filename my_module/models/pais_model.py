@@ -1,0 +1,25 @@
+import logging
+from odoo import models, fields, api
+
+_logger = logging.getLoger(__name__)
+
+class Pais_Model(models.Model):
+    _name = 'm.pais'
+
+    nombre = fields.Char('Nombre')
+    nacionalidad = fields.Many2one('m.registro_salidas_pais', 'Registro de Salida')
+    registro_salida = fields.One2many('m.pais', 'nacionalidad', string='Pais')
+
+    # def write(self, values):
+    #     res = super(Pais, self).write(values)
+
+    #     if 'name' in values.keys():
+    #         for pais in self:
+    #             if pais.id:
+    #                 pais.id.write({'name': pais.name})
+
+    #         _logger.info(
+    #             "ORM write pais >>>>>>>>> {} ".format(values)
+    #         )
+
+    #     return res

@@ -27,6 +27,7 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/pais_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_tree_pais" model="ir.ui.view">
+    <!-- <record id="view_tree_pais" model="ir.ui.view">
         <field name="name">view.tree.pais</field>
         <field name="model">m.pais</field>
         <field name="arch" type="xml">
@@ -8,7 +8,7 @@
                 <field name="nombre" />
             </tree>    
         </field>
-    </record>
+    </record> -->
 
     <record id="view_form_pais" model="ir.ui.view">
         <field name="name">view.form.pais</field>

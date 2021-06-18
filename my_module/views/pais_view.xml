@@ -10,6 +10,20 @@
         </field>
     </record>
 
+    <record id="view_form_pais" model="ir.ui.view">
+        <field name="name">view.form.pais</field>
+        <field name="model">m.pais</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="nombre" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="action_view_pais" model="ir.actions.act_window">
         <field name="name">Mantenimiento Modelo Pais</field>
         <field name="res_model">m.pais</field>
@@ -21,13 +35,5 @@
         parent=""
         action="my_module.action_view_pais"
     />
-
-    <!-- <menuitem name="my_module" id="my_module.menu_root"/>
-
-    <record model="ir.actions.act_window" id="my_module.action_window">
-        <field name="name">my_module window</field>
-        <field name="res_model">m.pais</field>
-        <field name="view_mode">tree,form</field>
-    </record> -->
 
 </odoo>

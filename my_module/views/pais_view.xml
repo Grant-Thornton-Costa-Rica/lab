@@ -21,7 +21,7 @@
         <field name="arch" type="xml">
             <form string="">
                 <sheet>
-                    <group string="Paises Registrados" name="group_top">
+                    <group string="Detalles del pais" name="group_top">
                         <group name="group_left">
                             <field name="codigo_pais" required="True"/>
                             <field name="nombre" required="True"/>

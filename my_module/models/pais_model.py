@@ -9,14 +9,12 @@ class Pais_Model(models.Model):
     nacionalidad = fields.Many2one('m.registro_salidas_pais', 'Registro de Salida')
     registro_salida = fields.One2many('m.pais', 'nacionalidad', string='Pais')
 
-    # @api.constrains('codigo_pais')
-    # def check_codigo_pais(self):
-    #     for rec in self:
-    #         codigo = rec
-    #         try:
-    #             codigo = int(codigo)
-    #         except ValueError:
-    #             raise ValidationError('Solo debe ingresar números.')
+    @api.constrains('codigo_pais')
+    def check_codigo_pais(self):
+        for rec in self:
+            codigo = rec
+            if not int(codigo):
+                raise ValidationError('Solo debe ingresar números.')
 
 
 

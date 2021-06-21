@@ -5,7 +5,7 @@
         <field name="model">m.pais</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="nombre" position="attributes" >
+                <field name="nombre" >
                     <attribute name="required">True</attribute>
                 </field>
                 <field name="create_date" />
@@ -18,7 +18,7 @@
 
     <record id="action_view_pais" model="ir.actions.act_window">
         <field name="name">Mantenimiento Modelo Pais</field>
-        <field name="res_model">m.pais</field>
+        <field name="res_model"><m class="pais"></m></field>
         <field name="view_mode">tree,form</field>
     </record>
 

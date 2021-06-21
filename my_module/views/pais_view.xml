@@ -21,7 +21,7 @@
         <field name="arch" type="xml">
             <form string="">
                 <sheet>
-                    <group>
+                    <group col="2">
                         <field name="nombre" required="True"/>
                         <field name="codigo_pais" required="True"/>
                         <field name="create_date" readonly="True"/>

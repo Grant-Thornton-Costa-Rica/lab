@@ -11,10 +11,12 @@ class Pais_Model(models.Model):
 
     @api.constrains('codigo_pais')
     def check_codigo_pais(self):
-        for rec in self:
-            codigo = rec
-            if not int(codigo):
-                raise ValidationError('Solo debe ingresar números.')
+        cod = self.search([]) - self
+        val = [x for x in cod]
+        if self in val:
+            raise ValidationError('El codigo del pais que desea ingresar ya existe')
+
+        return True
 
 
 

@@ -9,7 +9,7 @@ class Pais_Model(models.Model):
     nacionalidad = fields.Many2one('m.registro_salidas_pais', 'Registro de Salida')
     registro_salida = fields.One2many('m.pais', 'nacionalidad', string='Pais')
 
-     _sql_constraints = [
+    _sql_constraints = [
         ('codigo_pais_unique', 'unique('codigo_pais')', 'El valor del código que desea ingresar ya existe, pruebe con uno distinto.')
     ]
 

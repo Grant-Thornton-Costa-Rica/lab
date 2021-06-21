@@ -12,7 +12,7 @@ class Pais_Model(models.Model):
     @api.constrains('codigo_pais')
     def check_codigo_pais(self):
         for codigo in self:
-            if not codigo.codigo_pais.isdigit():
+            if not codigo.int(codigo_pais):
                 raise ValidationError(_('Solo debe ingresar números.'))
 
 

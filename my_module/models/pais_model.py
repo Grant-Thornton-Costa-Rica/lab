@@ -13,7 +13,7 @@ class Pais_Model(models.Model):
     def check_codigo_pais(self):
         for rec in self:
             if rec.codigo_pais <= 5:
-                raise ValidationError(_('Solo debe ingresar números.'))
+                raise ValidationError('Solo debe ingresar números.')
 
 
 

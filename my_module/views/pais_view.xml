@@ -5,7 +5,7 @@
         <field name="model">m.pais</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="nombre" string="Nombre del país" required="1" />
+                <field name="nombre" string="Nombre del país" attrs = "{'required':[('nombre','=','')]}" />
                 <field name="create_date" />
                 <field name="create_uid" />
                 <field name="write_date" />

@@ -12,7 +12,10 @@ class Pais_Model(models.Model):
     @api.constrains('codigo_pais')
     def check_codigo_pais(self):
         for rec in self:
-            if rec.codigo_pais <= 5:
+            codigo = rec
+            try:
+                codigo = int(codigo)
+            except ValueError:
                 raise ValidationError('Solo debe ingresar números.')
 
 

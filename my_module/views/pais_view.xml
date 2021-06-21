@@ -21,13 +21,17 @@
         <field name="arch" type="xml">
             <form string="">
                 <sheet>
-                    <group col="2">
-                        <field name="nombre" required="True"/>
-                        <field name="codigo_pais" required="True"/>
-                        <field name="create_date" readonly="True"/>
-                        <field name="create_uid" readonly="True"/>
-                        <field name="write_date" readonly="True"/>
-                        <field name="write_uid" readonly="True"/>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="nombre" required="True"/>
+                            <field name="codigo_pais" required="True"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="create_date" readonly="True"/>
+                            <field name="create_uid" readonly="True"/>
+                            <field name="write_date" readonly="True"/>
+                            <field name="write_uid" readonly="True"/>
+                        </group>
                     </group>
                 </sheet>
             </form>

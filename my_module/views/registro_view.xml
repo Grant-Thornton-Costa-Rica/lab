@@ -3,8 +3,8 @@
 
     <record id="view_tree" model="ir.ui.view">
         <field name="name">view.tree.registro</field>
-        <field name="model">m.registro_salidas_pais</field>
-        <field name="arch">
+        <field name="model">m.registro</field>
+        <field name="arch" type="xml">
             <tree>
                 <field name="nombre" />
                 <field name="fecha_nacimiento" />
@@ -21,7 +21,7 @@
 
     <record id="view_form_registro" model="ir.ui.view">
         <field name="name">view.form.registro</field>
-        <field name="model">m.registro_salidas_pais</field>
+        <field name="model">m.registro</field>
         <field name="arch" type="xml">
             <form string="">
                 <sheet>
@@ -47,7 +47,7 @@
 
     <record id="action_view_registro" model="ir.actions.act_window">
         <field name="name">Registro Salidas</field>
-        <field name="res_model">m.registro_salidas_pais</field>
+        <field name="res_model">m.registro</field>
         <field name="view_mode">tree,form</field>
     </record>
 

@@ -5,7 +5,7 @@
         <field name="model">m.pais</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="nombre" >
+                <field name="nombre" position="attributes">
                     <attribute name="required">True</attribute>
                 </field>
                 <field name="create_date" />

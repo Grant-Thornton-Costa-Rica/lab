@@ -39,7 +39,7 @@
     </record>
 
     <record id="action_view_pais" model="ir.actions.act_window">
-        <field name="name">Mantenimiento Modelo Pais</field>
+        <field name="name">My Module Test</field>
         <field name="res_model">m.pais</field>
         <field name="view_mode">tree,form</field>
     </record>

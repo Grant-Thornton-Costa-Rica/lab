@@ -1,4 +1,3 @@
-import logging
 from odoo import models, fields, aspi
 
 class Registro_Salidas_Pais_Model(models.Model):

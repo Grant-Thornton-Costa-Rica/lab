@@ -1,4 +1,3 @@
-import logging
 from odoo import models, fields, api
 
 class Detalle_Salidas_Model(models.Model):

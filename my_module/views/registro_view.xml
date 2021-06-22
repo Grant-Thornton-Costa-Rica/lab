@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
+    <!-- Vista Tree -->
     <record id="view_tree" model="ir.ui.view">
         <field name="name">view.tree.registro</field>
         <field name="model">m.registro</field>
@@ -19,6 +19,7 @@
         </field>
     </record>
 
+    <!-- Vista Form -->
     <record id="view_form_registro" model="ir.ui.view">
         <field name="name">view.form.registro</field>
         <field name="model">m.registro</field>
@@ -45,6 +46,17 @@
         </field>
     </record>
 
-    
+    <!-- Action -->
+    <record id="action_view_registro" model="ir.actions.act_window">
+        <field name="name">Registro Salidas</field>
+        <field name="res_model">m.registro</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
+    <!-- Menu -->
+    <menuitem
+        id="menu_registro"
+        name="Registro Salidas"
+        action="my_module.action_view_registro"
+    />
 </odoo>

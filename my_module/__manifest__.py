@@ -26,6 +26,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
+        'views/pais_view.xml',
+        'views/registro_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

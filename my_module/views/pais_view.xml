@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_tree_pais" model="ir.ui.view">
+    <!-- Vista Tree -->
+  <record id="view_tree_pais" model="ir.ui.view">
         <field name="name">view.tree.pais</field>
         <field name="model">m.pais</field>
         <field name="arch" type="xml">
@@ -15,6 +16,7 @@
         </field>
     </record>
 
+    <!-- Vista Form -->
     <record id="view_form_pais" model="ir.ui.view">
         <field name="name">view.form.pais</field>
         <field name="model">m.pais</field>
@@ -38,6 +40,17 @@
         </field>
     </record>
 
-    
+    <!-- Action -->
+    <record id="action_view_pais" model="ir.actions.act_window">
+        <field name="name">Mantenimiento Modelo Pais</field>
+        <field name="res_model">m.pais</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
+    <!-- Menu -->
+    <menuitem
+        id="menu_pais"
+        name="Mantenimiento Pais"
+        action="my_module.action_view_pais"
+    />
 </odoo>

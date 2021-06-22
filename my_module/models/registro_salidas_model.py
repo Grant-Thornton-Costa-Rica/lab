@@ -3,6 +3,8 @@ from odoo import models, fields, aspi
 
 class Registro_Salidas_Pais_Model(models.Model):
     _name = 'm.registro'
+    _description = 'Modulo Registro Salidas'
+    _rec_name = 'nombre'
 
     nombre = fields.Char('Nombre')
     fecha_nacimiento = fields.Date('Fecha Nacimiento')

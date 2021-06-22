@@ -4,7 +4,6 @@ from odoo import models, fields, api
 class Detalle_Salidas_Model(models.Model):
     _name = 'm.detalle'
     _description = 'Modulo Salidas Pais'
-    _rec_name = 'pais_visitado'
 
     pais_visitado = fields.Many2one('m.pais', 'Pais Visitado')
     fecha_salida = fields.Datetime('Fecha Salida')

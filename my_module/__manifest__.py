@@ -29,6 +29,7 @@
         'views/templates.xml',
         'views/pais_view.xml',
         'views/registro_view.xml',
+        'views/main.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

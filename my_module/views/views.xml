@@ -48,7 +48,6 @@
     <record id="action_view_pais" model="ir.actions.act_window">
         <field name="name">Mantenimiento Modelo Pais</field>
         <field name="res_model">m.pais</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
@@ -112,7 +111,6 @@
     <record id="action_view_registro" model="ir.actions.act_window">
         <field name="name">Registro Salidas</field>
         <field name="res_model">m.registro</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 

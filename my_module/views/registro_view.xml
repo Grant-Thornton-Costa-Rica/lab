@@ -30,7 +30,7 @@
                         <group name="group_left">
                             <field name="nombre" required="True"/>
                             <field name="fecha_nacimiento" required="True"/>
-                            <field name="nacionalidad" required="True" readonly="True"/>
+                            <field name="nacionalidad" required="True"/>
                             <field name="registro_salida" required="True" readonly="True"/>
                             <field name="detalle_salida" required="True" readonly="True"/>
                         </group>

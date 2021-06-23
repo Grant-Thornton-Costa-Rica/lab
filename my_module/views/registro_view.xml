@@ -41,11 +41,11 @@
                         <page name="detalle_salida" string="Detalle de Salidas">
                             <field name="detalle_salida">
                                 <tree editable="bottom">
-                                    <field name="pais_visitado" />
-                                    <field name="fecha_salida" />
-                                    <field name="fecha_entrada" />
-                                    <field name="observaciones" />
-                                    <field name="registro_salida" />
+                                    <field name="pais_visitado" required="True"/>
+                                    <field name="fecha_salida" required="True"/>
+                                    <field name="fecha_entrada" required="True"/>
+                                    <field name="observaciones" required="True"/>
+                                    <field name="registro_salida" readonly="True"/>
                                 </tree>
                             </field>
                         </page>

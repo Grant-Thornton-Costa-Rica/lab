@@ -1,4 +1,4 @@
-from odoo import models, fields, aspi
+from odoo import models, fields, api
 
 class Registro_Salidas_Pais_Model(models.Model):
     _name = 'm.registro'

@@ -21,6 +21,6 @@ class Detalle_Salidas_Model(models.Model):
         return True
 
     _constraints = [
-        (_check_dates, 'Error! La fecha de entrada debe ser menor a la fecha de entrada', ['fecha_entrada'])
+        (_check_dates, 'Error! La fecha de entrada debe ser menor a la fecha de entrada', ['fecha_salida'])
     ]
 

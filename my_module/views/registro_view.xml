@@ -43,8 +43,8 @@
                             <field name="detalle_salida">
                                 <tree editable="bottom">
                                     <field name="pais_visitado" required="True"/>
-                                    <field name="fecha_salida" required="True"/>
-                                    <field name="fecha_entrada" required="True"/>
+                                    <field name="fecha_salida" on_change="onchange_end_date(fecha_salida, fecha_entrada)" required="True"/>
+                                    <field name="fecha_entrada" on_change="onchange_end_date(fecha_salida, fecha_entrada)" required="True"/>
                                     <field name="observaciones" required="True"/>
                                     <field name="registro_salida" readonly="True"/>
                                 </tree>

@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from openerp.tools.translate import _
 
 class Detalle_Salidas_Model(models.Model):
     _name = 'm.detalle'
@@ -9,21 +10,9 @@ class Detalle_Salidas_Model(models.Model):
     observaciones = fields.Char('Observaciones')
     registro_salida = fields.Many2one('m.registro', 'Detalle Salida')
 
-    def _check_date(self, cr, uid, vals, context=None):
-        for obj in self.browse(cr, uid, ids):
-            start_date = obj.fecha_salida
-            end_date = obj.fecha_entrada
-
-            if start_date and end_date:
-                DATETIME_FORMAT = "%Y-%m-%d"
-                from_dt = datetime.datetime.strptime(start_date, DATETIME_FORMAT)
-                to_dt = datetime.datetime.strptime(end_date, DATETIME_FORMAT)
-
-                if to_dt < from_dt:
-                    return False
-        return True
-
-    _constraints = [
-        (_check_date, 'Your Message!', ['fecha_salida','fecha_entrada']),
-    ]
+    def onchange_end_date(self, cr, uid, ids, fecha_entrada, fecha_salida):
+        if (fecha_salida and fecha_entrada) and (fecha_salida < fecha_entrada):
+            raise osv.except_osv(_('Warning!'),_('The start date must be less than to the end date.'))
+            result = {'value': {}}
+        return result
 

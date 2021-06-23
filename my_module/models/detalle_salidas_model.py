@@ -12,9 +12,10 @@ class Detalle_Salidas_Model(models.Model):
     def _check_dates(self,):
         start = fecha_salida 
         end = fecha_entrada
-        if start > end:
-            return True
-        return False
+        if start <= end:
+            return False
+        return True
+        
 
     _constraints = [
         (_check_dates, 'Error! La fecha de entrada debe ser menor a la fecha de entrada', ['fecha_salida'])

@@ -40,7 +40,7 @@
                     <notebook>
                         <page name="detalle_salida" string="Detalle de Salidas">
                             <field name="detalle_salida">
-                                <tree>
+                                <tree editable="bottom">
                                     <field name="pais_visitado" />
                                     <field name="fecha_salida" />
                                     <field name="fecha_entrada" />

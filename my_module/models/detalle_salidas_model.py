@@ -9,14 +9,11 @@ class Detalle_Salidas_Model(models.Model):
     observaciones = fields.Char('Observaciones')
     registro_salida = fields.Many2one('m.registro', 'Detalle Salida')
 
-    def _check_dates(self, cr, uid, ids, context=None):
-        if context == None:
-            context = {}
-        obj_task = self.browse(cr, uid, ids[0], context=context)
-        start = obj_task.fecha_salida or False
-        end = obj_task.fecha_entrada or False
+    def _check_dates(self,):
+        start = fecha_salida 
+        end = fecha_entrada
         if start and end:
-            if start > end:
+            if start < end:
                 return False
         return True
 

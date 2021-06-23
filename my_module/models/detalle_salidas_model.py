@@ -2,10 +2,7 @@ from odoo import models, fields, api
 
 class Detalle_Salidas_Model(models.Model):
     _name = 'm.detalle'
-    _constraints = [
-        (_check_dates, 'Error! La fecha de entrada debe ser menor a la fecha de entrada', ['fecha_entrada'])
-    ]
-
+    
     pais_visitado = fields.Many2one('m.pais', 'Pais Visitado')
     fecha_salida = fields.Datetime('Fecha Salida')
     fecha_entrada = fields.Datetime('Fecha Entrada')
@@ -22,4 +19,8 @@ class Detalle_Salidas_Model(models.Model):
             if start > end:
                 return False
         return True
+
+    _constraints = [
+        (_check_dates, 'Error! La fecha de entrada debe ser menor a la fecha de entrada', ['fecha_entrada'])
+    ]
 

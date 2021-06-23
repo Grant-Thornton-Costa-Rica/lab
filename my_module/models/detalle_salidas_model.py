@@ -9,13 +9,12 @@ class Detalle_Salidas_Model(models.Model):
     observaciones = fields.Char('Observaciones')
     registro_salida = fields.Many2one('m.registro', 'Detalle Salida')
 
-    def _check_dates(self,):
+    def _check_dates(self):
         start = fecha_salida 
         end = fecha_entrada
         if start <= end:
             return False
         return True
-        
 
     _constraints = [
         (_check_dates, 'Error! La fecha de entrada debe ser menor a la fecha de entrada', ['fecha_salida'])

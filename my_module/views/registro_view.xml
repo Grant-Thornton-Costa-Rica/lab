@@ -9,7 +9,6 @@
                 <field name="nombre" />
                 <field name="fecha_nacimiento" />
                 <field name="nacionalidad" />
-                <field name="detalle_salida" />
                 <field name="create_date" />
                 <field name="create_uid" />
                 <field name="write_date" />
@@ -30,7 +29,6 @@
                             <field name="nombre" required="True"/>
                             <field name="fecha_nacimiento" required="True"/>
                             <field name="nacionalidad" required="True"/>
-                            <field name="detalle_salida" required="True"/>
                         </group>
                         <group name="group_right">
                             <field name="create_date" readonly="True"/>

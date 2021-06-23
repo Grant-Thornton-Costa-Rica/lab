@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_form_detalle" model="ir.ui.view">
+        <field name="name">view.form.detalle</field>
+        <field name="model">m.detalle</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="pais_visitado" required="True"/>
+                        <field name="fecha_salida" required="True"/>
+                        <field name="fecha_entrada" required="True"/>
+                        <field name="observaciones" />
+                        <field name="registro_salida" readonly="True" required="True"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_view_registro" model="ir.actions.act_window">
+        <field name="name">Detalle Salidas</field>
+        <field name="res_model">m.detalle</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

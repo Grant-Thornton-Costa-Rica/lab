@@ -28,6 +28,7 @@
         'views/views.xml',
         'views/pais_view.xml',
         'views/registro_view.xml',
+        'views/detalle_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

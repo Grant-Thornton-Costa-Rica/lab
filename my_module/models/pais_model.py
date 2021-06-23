@@ -10,8 +10,9 @@ class Pais_Model(models.Model):
     
     codigo_pais = fields.Integer('Codigo')
     nombre = fields.Char('Nombre')
-    nacionalidad = fields.Many2one('m.registro', 'Registro de Salida')
+    nacionalidad = fields.Many2one('m.registro', 'Nacionalidad')
     registro_salida = fields.One2many('m.detalle', 'pais_visitado', string='Pais')
+    pais_visitado = fields.Many2one('m.detalle', 'Pais Visitado')
 
 
 

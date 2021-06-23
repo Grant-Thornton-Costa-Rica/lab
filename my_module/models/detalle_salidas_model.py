@@ -12,8 +12,10 @@ class Detalle_Salidas_Model(models.Model):
     def _check_dates(self):
         start = fecha_salida 
         end = fecha_entrada
+        print(start <= end)
         if start <= end:
             return False
+
         return True
 
     _constraints = [

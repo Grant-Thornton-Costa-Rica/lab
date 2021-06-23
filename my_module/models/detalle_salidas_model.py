@@ -7,4 +7,4 @@ class Detalle_Salidas_Model(models.Model):
     fecha_salida = fields.Datetime('Fecha Salida')
     fecha_entrada = fields.Datetime('Fecha Entrada')
     observaciones = fields.Char('Observaciones')
-    registro_salida = fields.Many2one('m.detalle', 'Detalle Salida')
+    registro_salida = fields.Many2one('m.registro', 'Detalle Salida')

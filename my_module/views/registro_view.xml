@@ -31,7 +31,7 @@
                             <field name="nombre" required="True"/>
                             <field name="fecha_nacimiento" required="True"/>
                             <field name="nacionalidad" required="True"/>
-                            <field name="registro_salida" required="True" readonly="True"/>
+                            <field name="registro_salida" required="True"/>
                             <field name="detalle_salida" required="True"/>
                         </group>
                         <group name="group_right">

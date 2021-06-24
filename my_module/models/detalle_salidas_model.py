@@ -13,6 +13,6 @@ class Detalle_Salidas_Model(models.Model):
     @api.constrains('fecha_salida', 'fecha_entrada')
     def fecha_val(self):
         for rec in self:
-            if rec.fecha_salida < rec.fecha_entrada:
+            if rec.fecha_salida > rec.fecha_entrada:
                 raise ValidationError('La fecha de salida no puede ser mayor a la fecha de entrada')
 

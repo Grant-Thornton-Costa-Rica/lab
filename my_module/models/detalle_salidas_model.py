@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-from openerp.tools.translate import _
+from odoo.exceptions import ValidationError
 
 class Detalle_Salidas_Model(models.Model):
     _name = 'm.detalle'
@@ -10,9 +10,10 @@ class Detalle_Salidas_Model(models.Model):
     observaciones = fields.Char('Observaciones')
     registro_salida = fields.Many2one('m.registro', 'Detalle Salida')
 
-    def onchange_end_date(self, cr, uid, ids, fecha_entrada, fecha_salida):
-        if (fecha_salida and fecha_entrada) and (fecha_salida < fecha_entrada):
-            raise osv.except_osv(_('Warning!'),_('The start date must be less than to the end date.'))
-            result = {'value': {}}
-        return result
+    @api.multi
+    @api.constrains('fecha_salida', 'fecha_entrada')
+    def fecha_val(self):
+        for rec in self:
+            if rec.fecha_salida < rec.fecha_entrada:
+                raise ValidationError('La fecha de salida no puede ser mayor a la fecha de entrada')
 

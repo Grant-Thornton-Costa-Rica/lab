@@ -9,7 +9,7 @@
                 <field name="nombre" />
                 <field name="fecha_nacimiento" />
                 <field name="nacionalidad" />
-                <field name="direccion" attrs="{'invisible': [('nacionalidad','=','Costa Rica')]}"/>
+                <field name="direccion" attrs="{'invisible': [('nacionalidad','=','costa_rica')]}"/>
                 <field name="create_date" />
                 <field name="create_uid" />
                 <field name="write_date" />
@@ -30,7 +30,7 @@
                             <field name="nombre" required="True"/>
                             <field name="fecha_nacimiento" required="True"/>
                             <field name="nacionalidad" required="True"/>
-                            <field name="direccion" attrs="{'invisible': [('nacionalidad','=','Costa Rica')]}"/>
+                            <field name="direccion" attrs="{'invisible': [('nacionalidad','=','costa_rica')]}"/>
                         </group>
                         <group name="group_right">
                             <field name="create_date" readonly="True"/>

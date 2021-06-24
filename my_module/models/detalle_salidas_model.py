@@ -3,6 +3,7 @@ from openerp.tools.translate import _
 
 class Detalle_Salidas_Model(models.Model):
     _name = 'm.detalle'
+    _description = 'Modulo Detalle Salidas'
     
     pais_visitado = fields.Many2one('m.pais', 'Pais Visitado')
     fecha_salida = fields.Datetime('Fecha Salida')

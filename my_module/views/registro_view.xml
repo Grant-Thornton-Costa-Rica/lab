@@ -30,7 +30,7 @@
                             <field name="nombre" required="True"/>
                             <field name="fecha_nacimiento" required="True"/>
                             <field name="nacionalidad" required="True"/>
-                            <field name="direccion" attrs="{'invisible': [('nacionalidad','=','costa rica')]}"/>
+                            <field name="direccion" attrs="{'invisible': [('nacionalidad','=','Costa Rica')]}"/>
                         </group>
                         <group name="group_right">
                             <field name="create_date" readonly="True"/>
@@ -44,8 +44,8 @@
                             <field name="detalle_salida">
                                 <tree editable="bottom">
                                     <field name="pais_visitado" required="True"/>
-                                    <field name="fecha_salida" on_change="onchange_end_date(fecha_salida, fecha_entrada)" required="True"/>
-                                    <field name="fecha_entrada" on_change="onchange_end_date(fecha_salida, fecha_entrada)" required="True"/>
+                                    <field name="fecha_salida" required="True"/>
+                                    <field name="fecha_entrada" required="True"/>
                                     <field name="observaciones" required="True"/>
                                     <field name="registro_salida" readonly="True"/>
                                 </tree>

@@ -11,4 +11,10 @@ class Registro_Salidas_Pais_Model(models.Model):
     direccion = fields.Char('Direccion')
     detalle_salida = fields.One2many('m.detalle', 'registro_salida', string='Registro Salidas Pais')
 
+    nombre_pais = fields.Char(compute='_compute_nombre_pais', string='')
+    
+    @api.depends('nacionalidad')
+    def _compute_nombre_pais(self):
+        self.nombre_pais = self.nacionalidad.nombre
+
     

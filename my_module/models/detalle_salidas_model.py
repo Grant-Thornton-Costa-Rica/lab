@@ -10,7 +10,6 @@ class Detalle_Salidas_Model(models.Model):
     observaciones = fields.Char('Observaciones')
     registro_salida = fields.Many2one('m.registro', 'Detalle Salida')
 
-    @api.multi
     @api.constrains('fecha_salida', 'fecha_entrada')
     def fecha_val(self):
         for rec in self:

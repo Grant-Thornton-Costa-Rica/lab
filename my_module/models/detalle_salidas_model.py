@@ -11,7 +11,7 @@ class Detalle_Salidas_Model(models.Model):
     observaciones = fields.Char('Observaciones')
     registro_salida = fields.Many2one('m.registro', 'Detalle Salida')
 
-    dias = fields.Char(compute='_compute_calcular_dias', string='Dias transcurridos')
+    dias = fields.Char(compute='_compute_calcular_dias', string='Dias Transcurridos', store='True')
     
     @api.depends('fecha_salida', 'fecha_entrada')
     def _compute_calcular_dias(self):
@@ -20,7 +20,7 @@ class Detalle_Salidas_Model(models.Model):
                 rec.dias = (rec.fecha_entrada - rec.fecha_salida).days
 
     @api.constrains('fecha_salida', 'fecha_entrada')
-    def fecha_val(self):
+    def _fecha_val(self):
         for rec in self:
             if rec.fecha_salida > rec.fecha_entrada:
                 raise ValidationError('La fecha de salida no puede ser mayor a la fecha de entrada')

@@ -8,6 +8,7 @@
             <tree>
                 <field name="nombre" />
                 <field name="fecha_nacimiento" />
+                <field name="edad" />
                 <field name="nacionalidad" />
                 <field name="direccion" />
                 <field name="create_date" />

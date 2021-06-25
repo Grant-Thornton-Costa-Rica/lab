@@ -13,7 +13,7 @@
                         <field name="fecha_entrada" required="True"/>
                         <field name="dias" readonly="True"/>
                         <field name="observaciones" />
-                        <field name="registro_salida" readonly="True" required="True"/>
+                        <field name="registro_salida" readonly="True"/>
                     </group>
                 </sheet>
             </form>

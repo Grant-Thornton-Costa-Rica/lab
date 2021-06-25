@@ -22,7 +22,6 @@ class Detalle_Salidas_Model(models.Model):
         else:
             for rec in self:
                 rec.dias = 0
-            
 
     @api.constrains('fecha_salida', 'fecha_entrada')
     def _fecha_val(self):

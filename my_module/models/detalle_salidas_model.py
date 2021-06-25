@@ -11,7 +11,7 @@ class Detalle_Salidas_Model(models.Model):
     observaciones = fields.Char('Observaciones')
     registro_salida = fields.Many2one('m.registro', 'Detalle Salida')
 
-    dias = fields.Char(compute='_compute_calcular_dias', string='Dias Transcurridos', store='True')
+    dias = fields.Char(compute='_compute_calcular_dias', string='Dias Transcurridos')
     
     @api.depends('fecha_salida', 'fecha_entrada')
     def _compute_calcular_dias(self):

@@ -20,8 +20,7 @@ class Detalle_Salidas_Model(models.Model):
             for rec in self:
                 rec.dias = (rec.fecha_entrada - rec.fecha_salida).days
         else:
-            for rec in self:
-                rec.dias = 0
+            rec.dias = 0
             
 
     @api.constrains('fecha_salida', 'fecha_entrada')

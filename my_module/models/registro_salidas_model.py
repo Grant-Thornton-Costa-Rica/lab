@@ -17,4 +17,17 @@ class Registro_Salidas_Pais_Model(models.Model):
     def _compute_nombre_pais(self):
         self.nombre_pais = self.nacionalidad.nombre
 
+    edad = fields.Char(compute='_compute_edad', string='')
+    
+    @api.depends('fecha_nacimiento')
+    def _compute_edad(self):
+        for rec in self:
+            if rec.fecha_nacimiento and rec.fecha_nacimiento <= fields.Date.today():
+                rec.age = relativedelta(
+                    fields.Date.from_string(fields.Date.today()),
+                    fields.Date.from_string(rec.fecha_nacimiento)
+                ).years
+            else:
+                rec.age = 0
+
     

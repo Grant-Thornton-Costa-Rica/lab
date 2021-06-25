@@ -18,6 +18,11 @@ class Detalle_Salidas_Model(models.Model):
         if self.fecha_salida and self.fecha_entrada:
             for rec in self:
                 rec.dias = (rec.fecha_entrada - rec.fecha_salida).days
+        elif not self.fecha_salida and not self.fecha_entrada:
+            rec.dias = 0
+        else:
+            rec.dias = 0
+            
 
     @api.constrains('fecha_salida', 'fecha_entrada')
     def _fecha_val(self):

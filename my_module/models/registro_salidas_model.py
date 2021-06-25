@@ -21,7 +21,7 @@ class Registro_Salidas_Pais_Model(models.Model):
 
     @api.depends('fecha_nacimiento')
     def _compute_edad(self):
-        hoy = date.today()
+        hoy = date.hoy()
         if self.fecha_nacimiento:
             for rec in self:
                 dif = int(rec.fecha_nacimiento.replace(year = hoy.year) > hoy)

@@ -15,9 +15,9 @@ class Detalle_Salidas_Model(models.Model):
     
     @api.depends('fecha_salida', 'fecha_entrada')
     def _compute_calcular_dias(self):
+        global rec
         if self.fecha_salida and self.fecha_entrada:
             for rec in self:
-                rec.dias = 0
                 rec.dias = (rec.fecha_entrada - rec.fecha_salida).days
         elif not self.fecha_salida and not self.fecha_entrada:
             rec.dias = 0

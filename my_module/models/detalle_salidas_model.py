@@ -4,6 +4,7 @@ from datetime import datetime as dt
 
 class Detalle_Salidas_Model(models.Model):
     _name = 'm.detalle'
+    _description = 'Modulo Detalle Salidas'
     
     pais_visitado = fields.Many2one('m.pais', 'Pais Visitado')
     fecha_salida = fields.Date('Fecha Salida')

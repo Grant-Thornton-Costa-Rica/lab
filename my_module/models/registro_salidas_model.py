@@ -24,8 +24,8 @@ class Registro_Salidas_Pais_Model(models.Model):
         hoy = date.today()
         if self.fecha_nacimiento:
             for rec in self:
-                dif = int(fecha_nacimiento.replace(year = hoy.year) > hoy)
-                rec.edad = date.hoy().year - fecha_nacimiento - dif
+                dif = int(rec.fecha_nacimiento.replace(year = hoy.year) > hoy)
+                rec.edad = date.hoy().year - rec.fecha_nacimiento - dif
         else:
             for rec in self:
                 rec.edad = 0

@@ -23,7 +23,7 @@ class Registro_Salidas_Pais_Model(models.Model):
     def _compute_edad(self):
         hoy = datetime.date.today()
         for rec in self:
-            if self.fecha_nacimiento:
+            if rec.fecha_nacimiento:
                 fecha_nacimiento = fields.Datetime.to_datetime(rec.fecha_nacimiento).date()
                 edad_total = str(int((hoy - fecha_nacimiento).days / 365))
                 rec.edad = edad_total

@@ -17,12 +17,11 @@ class Detalle_Salidas_Model(models.Model):
     @api.depends('fecha_salida', 'fecha_entrada')
     def _compute_calcular_dias(self):
         global rec
-        if self.fecha_salida and self.fecha_entrada:
-            for rec in self:
+        for rec in self:
+            if rec.fecha_salida and rec.fecha_entrada:
                 rec.dias = (rec.fecha_entrada - rec.fecha_salida).days
-        else:
-            for rec in self:
-                rec.dias = 0
+            else:
+                rec.dias = "No disponible"
 
     @api.constrains('fecha_salida', 'fecha_entrada')
     def _fecha_val(self):

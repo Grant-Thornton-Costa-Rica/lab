@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-from datetime import date
+import datetime
 
 class Registro_Salidas_Pais_Model(models.Model):
     _name = 'm.registro'
@@ -21,14 +21,14 @@ class Registro_Salidas_Pais_Model(models.Model):
 
     @api.depends('fecha_nacimiento')
     def _compute_edad(self):
-        hoy = date.today()
-        if self.fecha_nacimiento:
-            for rec in self:
-                dif = int(rec.fecha_nacimiento.replace(year = hoy.year) > hoy)
-                rec.edad = date.today().year - rec.fecha_nacimiento - dif
-        else:
-            for rec in self:
-                rec.edad = 0
+        hoy = datetime.date.today()
+        for rec in self:
+            if self.fecha_nacimiento:
+                fecha_nacimiento = fields.Datetime.to_datetime(rec.fecha_nacimiento).date()
+                edad_total = str(int((hoy - fecha_nacimiento).days / 365))
+                rec.edad = edad_total
+            else:
+                rec.edad = "No disponible"
         
 
     

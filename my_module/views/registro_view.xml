@@ -29,6 +29,7 @@
                         <group name="group_left">
                             <field name="nombre" required="True"/>
                             <field name="fecha_nacimiento" required="True"/>
+                            <field name="edad" readonly="True"/>
                             <field name="nacionalidad" required="True"/>
                             <field name="direccion" attrs="{'invisible': [('nombre_pais','=','Costa Rica')]}"/>
                             <field name="nombre_pais" invisible="True"/>

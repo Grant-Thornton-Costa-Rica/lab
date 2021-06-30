@@ -29,7 +29,7 @@
         'views/pais_view.xml',
         'views/registro_view.xml',
         'views/detalle_view.xml',
-        'reports/registro_report.xml',
+        'views/registro_report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

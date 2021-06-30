@@ -90,12 +90,24 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td t-field="doc.pais_visitado"/>
-                                    <td t-field="doc.fecha_salida"/>
-                                    <td t-field="doc.fecha_entrada"/>
-                                    <td t-field="doc.dias"/>
-                                    <td t-field="doc.observaciones"/>
-                                    <td t-field="doc.registro_salida"/>
+                                    <td>
+                                        <span t-field="doc.pais_visitado"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.fecha_salida"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.fecha_entrada"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.dias"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.observaciones"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.registro_salida"/>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

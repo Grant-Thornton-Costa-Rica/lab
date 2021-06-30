@@ -11,7 +11,7 @@
         <field name="binding_type">report</field>
     </record>
 
-    <template id="report_template_name">
+    <template id="registro_report_view">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
                 <t t-call="web.external_layout">
@@ -20,7 +20,7 @@
                         <p>From <span t-field="doc.start_date"/> to <span t-field="doc.end_date"/></p>
                         <h3>Attendees:</h3>
                         <ul>
-                            <t <t t-foreach="doc.attendee_ids" t-as="attendee">
+                            <t t-foreach="doc.attendee_ids" t-as="attendee">
                                 <li><span t-field="attendee.name"/></li>
                             </t>
                         </ul>

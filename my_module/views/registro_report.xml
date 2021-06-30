@@ -3,7 +3,7 @@
 
     <record id="registro_report" model="ir.actions.report">
         <field name="name">Reporte de Registros</field>
-        <field name="model">m.registro</field>
+        <field name="model">m.registro,m.detalle</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">my_module.registro_report_view</field>
         <field name="report_file">my_module.registro_report_view</field>

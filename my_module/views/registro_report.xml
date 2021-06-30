@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <h4>Sección: Detalle Registros</h4>
-                        <table class="table table-bordered table-condensed">
+                        <table id="tbDetalle" class="table table-bordered table-condensed">
                             <tbody>
                                 <tr>
                                     <td>
@@ -72,6 +72,30 @@
                                         </h6>
                                         <span t-field="doc.detalle_salida"/>
                                     </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr/>
+                        <h4>Sección: Detalle Salidas</h4>
+                        <table id="tbSalidas" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Pais Visitado</th>
+                                    <th>Fecha Salida</th>
+                                    <th>Fecha Entrada</th>
+                                    <th>Dias Transcurridos</th>
+                                    <th>Observaciones</th>
+                                    <th>Detalle Salida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td t-field="doc.pais_visitado"/>
+                                    <td t-field="doc.fecha_salida"/>
+                                    <td t-field="doc.fecha_entrada"/>
+                                    <td t-field="doc.dias"/>
+                                    <td t-field="doc.observaciones"/>
+                                    <td t-field="doc.registro_salida"/>
                                 </tr>
                             </tbody>
                         </table>

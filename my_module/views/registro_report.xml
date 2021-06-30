@@ -16,8 +16,12 @@
             <t t-foreach="docs" t-as="doc">
                 <t t-call="web.external_layout">
                     <div class="page">
-                        <!-- <h2 t-field="doc.name"/>
-                        <p>From <span t-field="doc.start_date"/> to <span t-field="doc.end_date"/></p>
+                        <h1>Reporte Detalle Registros</h1>
+                        <h2 t-field="doc.nombre"/>
+                        <h2 t-field="doc.fecha_nacimiento"/>
+                        <h2 t-field="doc.edad"/>
+                        <h2 t-field="doc.nacionalidad"/>
+                        <!-- <p>From <span t-field="doc.start_date"/> to <span t-field="doc.end_date"/></p>
                         <h3>Attendees:</h3>
                         <ul>
                             <t t-foreach="doc.attendee_ids" t-as="attendee">

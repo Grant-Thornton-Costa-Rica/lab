@@ -5,9 +5,9 @@
         <field name="name">Reporte de Registros</field>
         <field name="model">m.registro</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">registro.registro_report_view</field>
-        <field name="report_file">registro.registro_report</field>
-        <field name="binding_model_id" ref="m.registro"/>
+        <field name="report_name">m.registro_report_view</field>
+        <field name="report_file">m.registro_report</field>
+        <field name="binding_model_id" ref="model_m_registro"/>
         <field name="binding_type">report</field>
     </record>
 

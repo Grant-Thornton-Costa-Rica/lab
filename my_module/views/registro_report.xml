@@ -22,7 +22,7 @@
                                 <span>1</span>
                             </div>
                         </div>
-                        <h4>Reporte Detalle Registros</h4>
+                        <h4>Sección: Reporte Detalle Registros</h4>
                         <table class="table table-bordered table-condensed">
                             <tbody>
                                 <tr>
@@ -31,6 +31,46 @@
                                             <strong>Nombre persona</strong>
                                         </h6>
                                         <span t-field="doc.nombre"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>
+                                            <strong>Fecha nacimiento</strong>
+                                        </h6>
+                                        <span t-field="doc.fecha_nacimiento"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>
+                                            <strong>Edad</strong>
+                                        </h6>
+                                        <span t-field="doc.edad"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>
+                                            <strong>Nacionalidad</strong>
+                                        </h6>
+                                        <span t-field="doc.nacionalidad"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>
+                                            <strong>Direccion</strong>
+                                        </h6>
+                                        <span t-field="doc.direccion"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>
+                                            <strong>Detalle de Salida</strong>
+                                        </h6>
+                                        <span t-field="doc.detalle_salida"/>
                                     </td>
                                 </tr>
                             </tbody>

@@ -3,7 +3,7 @@
 
     <record id="registro_report" model="ir.actions.report">
         <field name="name">Reporte de Registros</field>
-        <field name="model">m.registro,m.detalle</field>
+        <field name="model">m.registro</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">my_module.registro_report_view</field>
         <field name="report_file">my_module.registro_report_view</field>
@@ -91,22 +91,22 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <span t-field="doc.pais_visitado"/>
+                                        <span t-field="doc.detalle_salida.pais_visitado"/>
                                     </td>
                                     <td>
-                                        <span t-field="doc.fecha_salida"/>
+                                        <span t-field="doc.detalle_salida.fecha_salida"/>
                                     </td>
                                     <td>
-                                        <span t-field="doc.fecha_entrada"/>
+                                        <span t-field="doc.detalle_salida.fecha_entrada"/>
                                     </td>
                                     <td>
-                                        <span t-field="doc.dias"/>
+                                        <span t-field="doc.detalle_salida.dias"/>
                                     </td>
                                     <td>
-                                        <span t-field="doc.observaciones"/>
+                                        <span t-field="doc.detalle_salida.observaciones"/>
                                     </td>
                                     <td>
-                                        <span t-field="doc.registro_salida"/>
+                                        <span t-field="doc.detalle_salida.registro_salida"/>
                                     </td>
                                 </tr>
                             </tbody>

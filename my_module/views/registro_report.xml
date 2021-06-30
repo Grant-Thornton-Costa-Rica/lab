@@ -65,14 +65,6 @@
                                         <span t-field="doc.direccion"/>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <h6>
-                                            <strong>Detalle de Salida</strong>
-                                        </h6>
-                                        <span t-field="doc.detalle_salida"/>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                         <hr/>

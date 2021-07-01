@@ -68,14 +68,15 @@
         <field name="name">Registro Salidas</field>
         <field name="res_model">m.registro</field>
         <field name="view_mode">tree,form</field>
+        <field name="domain">['|', '('company_id', '=', False), ('company_id', '=', company_id)]</field>
     </record>
 
-    <record id="registro_view_rule" model="ir.rule">
+    <!-- <record id="registro_view_rule" model="ir.rule">
         <field name="name">Registro Rule</field>
         <field name="model_id" ref="model_m_registro" />
         <field name="global" eval="True" />
         <field name="domain_force">['|', '('company_id', '=', False), ('company_id', '=', company_id)]</field>
-    </record>
+    </record> -->
 
     <!-- Menu -->
     <menuitem

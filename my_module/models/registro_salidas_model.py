@@ -11,7 +11,6 @@ class Registro_Salidas_Pais_Model(models.Model):
     edad = fields.Char(compute='_compute_edad', string='Edad')
     nacionalidad = fields.Many2one('m.pais', 'Nacionalidad')
     company_id = fields.Many2one('res.company', 'Company', required=True, readonly=False, default=lambda self: self.env.company.id)
-    # company_idNumber = fields.Many|('res.company', 'Company ID', required=True, readonly=True, default=lambda self: self.env.company.)
     direccion = fields.Char('Direccion')
     detalle_salida = fields.One2many('m.detalle', 'registro_salida', string='Registro Salidas Pais')
 
@@ -32,9 +31,6 @@ class Registro_Salidas_Pais_Model(models.Model):
             else:
                 rec.edad = "No disponible"
 
-    # def search(self, args, offset=0, limit=None, order=None, count=False):
-    #     args.append(('company_id', '=', 'self.env.company.id'))
-    #     return super(Registro_Salidas_Pais_Model, self).search(args, offset=0, limit=None, order=order, count=False)
 
     
         

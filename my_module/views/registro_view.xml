@@ -68,7 +68,7 @@
         <field name="name">Registro Salidas</field>
         <field name="res_model">m.registro</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">[('company_id', 'in', 'company_id')]</field>
+        <field name="domain">[('company_id', 'in', 'GT2')]</field>
     </record>
 
     <!-- <record id="registro_view_rule" model="ir.rule">

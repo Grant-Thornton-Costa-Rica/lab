@@ -10,6 +10,7 @@ class Registro_Salidas_Pais_Model(models.Model):
     fecha_nacimiento = fields.Date('Fecha Nacimiento')
     edad = fields.Char(compute='_compute_edad', string='Edad')
     nacionalidad = fields.Many2one('m.pais', 'Nacionalidad')
+    company = fields.Many2one('res.company', 'Compañia')
     direccion = fields.Char('Direccion')
     detalle_salida = fields.One2many('m.detalle', 'registro_salida', string='Registro Salidas Pais')
 

@@ -68,10 +68,10 @@
         <field name="name">Registro Salidas</field>
         <field name="res_model">m.registro</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">[('company_id','=','YourCompany')]</field>
+        <field name="domain">[('company_id','=','self.env.company.id')]</field>
     </record>
 
-    <record id="registro_view_rule" model="ir.rule">
+    <!-- <record id="registro_view_rule" model="ir.rule">
         <field name="name">Registro Rule</field>
         <field name="model_id" ref="model_m_registro" />
         <field name="domain_force">[('company_id', '=', 'self.env.company.id')]</field>
@@ -79,7 +79,7 @@
         <field name="perm_create" eval="False" />
         <field name="perm_write" eval="False" />
         <field name="perm_unlink" eval="False" />
-    </record>
+    </record> -->
 
     <!-- Menu -->
     <menuitem

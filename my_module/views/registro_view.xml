@@ -10,6 +10,7 @@
                 <field name="fecha_nacimiento" />
                 <field name="edad" />
                 <field name="nacionalidad" />
+                <field name="company_id" />
                 <field name="direccion" />
                 <field name="create_date" />
                 <field name="create_uid" />

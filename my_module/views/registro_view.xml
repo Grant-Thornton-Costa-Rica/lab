@@ -71,6 +71,16 @@
         <field name="domain">[('company_id','=','YourCompany')]</field>
     </record>
 
+    <record id="registro_view_rule" model="ir.rule">
+        <field name="name">Registro Rule</field>
+        <field name="model_id" ref="m.registro" />
+        <field name="domain_force">[('company_id', '=', 'company.id')]</field>
+        <field name="perm_read" eval="True" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+
     <!-- Menu -->
     <menuitem
         id="menu_registro"

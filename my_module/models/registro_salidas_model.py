@@ -31,6 +31,10 @@ class Registro_Salidas_Pais_Model(models.Model):
             else:
                 rec.edad = "No disponible"
 
+    def search(self, args, offset=0, limit=None, order=None, count=False):
+        args.append(('company_id', '=', 'self.env.company.id'))
+        return super(Registro_Salidas_Pais_Model, self).search(args, offset=0, limit=None, order=order, count=False)
+
     
         
 

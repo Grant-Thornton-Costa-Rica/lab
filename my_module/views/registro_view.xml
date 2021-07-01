@@ -68,6 +68,7 @@
         <field name="name">Registro Salidas</field>
         <field name="res_model">m.registro</field>
         <field name="view_mode">tree,form</field>
+        <field name="domain">[('company_id','=','GT CR')]</field>
     </record>
 
     <!-- Menu -->

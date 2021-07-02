@@ -11,6 +11,7 @@
                 <field name="edad" />
                 <field name="nacionalidad" />
                 <field name="company_id" />
+                <field name="ced" />
                 <field name="direccion" />
                 <field name="create_date" />
                 <field name="create_uid" />
@@ -34,6 +35,7 @@
                             <field name="edad" readonly="True"/>
                             <field name="nacionalidad" required="True"/>
                             <field name="company_id" groups="base.group_multi_company" />
+                            <field name="ced" required="True"/>
                             <field name="direccion" attrs="{'invisible': [('nombre_pais','=','Costa Rica')]}"/>
                             <field name="nombre_pais" invisible="True"/>
                         </group>

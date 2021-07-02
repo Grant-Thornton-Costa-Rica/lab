@@ -36,8 +36,8 @@
                             <field name="nacionalidad" required="True"/>
                             <field name="company_id" groups="base.group_multi_company" />
                             <field name="ced" required="True"/>
-                            <field name="ced_juridica" attrs="{'invisible': [('ced', '=', 'Cedula Fisica')]}" />
-                            <field name="ced_fisica" attrs="{'invisible': [('ced', '=', 'Cedula Juridica')]}" />
+                            <field name="ced_juridica" attrs="{'invisible': [('ced', 'in', 'Cedula Fisica')]}" />
+                            <field name="ced_fisica" attrs="{'invisible': [('ced', 'in', 'Cedula Juridica')]}" />
                             <field name="direccion" attrs="{'invisible': [('nombre_pais','=','Costa Rica')]}"/>
                             <field name="nombre_pais" invisible="True"/>
                         </group>

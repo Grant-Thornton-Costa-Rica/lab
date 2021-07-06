@@ -8,7 +8,7 @@
             <field name="partner_id" position="before">
                 <!-- <field name="ced" /> -->
             </field>
-            <field name="ced" required="True"/>
+            <!-- <field name="ced" required="True"/> -->
         </field>
     </record>
 </odoo>

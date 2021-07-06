@@ -6,9 +6,17 @@
             <field name="model">res.company</field>
             <field name="inherit_id" ref="base.view_groups_form"/>
             <field name="arch" type="xml">
-            <xpath expr="//field[@name='vat']" position="after">
-                <field name="test"/>
-            </xpath>
+            <form string="">
+                <sheet>
+                    <group string="Tipo Cedula" name="group_top">
+                        <group name="group_left">
+                            <field name="ced" required="True"/>
+                        </group>
+                        <group name="group_right">
+                        </group>
+                    </group>
+                </sheet>
+            </form>
         </record>
 
         <!-- Action -->

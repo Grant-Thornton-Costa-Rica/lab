@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
         <record id="res_company_inherit_model" model="ir.ui.view">
@@ -35,4 +35,4 @@
         />
     </data>
 </openerp>
-
+ -->

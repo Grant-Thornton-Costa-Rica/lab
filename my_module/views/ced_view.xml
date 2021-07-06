@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="base.view_company_form"/>
         <field name="arch" type="xml">
             <field name="vat" position="after">
-                <field name="ced" position="move"/>
+                <field name="ced"/>
             </field>
         </field>
     </record>

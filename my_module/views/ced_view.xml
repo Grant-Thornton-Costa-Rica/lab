@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- <record id="res_company_inherit_model" model="ir.ui.view">
-        <field name="name">res.company.form.inherit</field>
+    <record id="res_company_inherited_model" model="ir.ui.view">
+        <field name="name">res.company.inherited</field>
         <field name="model">res.company</field>
-        <field name="inherit_id" ref="base.view_groups_form"/>
+        <field name="inherit_id" ref="base.view_company_form"/>
         <field name="arch" type="xml">
-        <form string="">
-            <sheet>
-                <group string="Tipo Cedula" name="group_top">
-                    <group name="group_left">
-                        <field name="ced" required="True"/>
-                    </group>
-                    <group name="group_right">
-                    </group>
-                </group>
-            </sheet>
-        </form>
+        <field name="partner_id" position="after">
+            <field name="ced" />
+        </field>
     </record>
-
 
     <record id="action_view_cedula" model="ir.actions.act_window">
         <field name="name">Modelo Tipo Cedula</field>
@@ -25,11 +16,10 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-
     <menuitem
         id="menu_cedula"
         name="Tipo Cedula"
         action="my_module.action_view_pais"
         parent="menu_registro"
-    /> -->
+    />
 </odoo>

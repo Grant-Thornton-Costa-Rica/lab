@@ -13,9 +13,6 @@ class Registro_Salidas_Pais_Model(models.Model):
     nacionalidad = fields.Many2one('m.pais', 'Nacionalidad')
     company_id = fields.Many2one('res.company', 'Company', required=True, readonly=True, default=lambda self: self.env.company)
     direccion = fields.Char('Direccion')
-    ced = fields.Selection([('juridica', 'Cedula Juridica'), ('fisica', 'Cedula Fisica')], string="Tipo Cedula")
-    ced_juridica = fields.Char('Cedula Juridica', size=12)
-    ced_fisica = fields.Char('Cedula Fisica', size=9)
     detalle_salida = fields.One2many('m.detalle', 'registro_salida', string='Registro Salidas Pais')
 
     nombre_pais = fields.Char(compute='_compute_nombre_pais', string='')

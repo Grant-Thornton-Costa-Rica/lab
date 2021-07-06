@@ -52,6 +52,5 @@
         id="menu_pais"
         name="Mantenimiento Pais"
         action="my_module.action_view_pais"
-        parent="menu_registro"
     />
 </odoo>

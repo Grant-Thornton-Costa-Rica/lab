@@ -1,38 +1,35 @@
-<!-- <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
-        <record id="res_company_inherit_model" model="ir.ui.view">
-            <field name="name">res.company.form.inherit</field>
-            <field name="model">res.company</field>
-            <field name="inherit_id" ref="base.view_groups_form"/>
-            <field name="arch" type="xml">
-            <form string="">
-                <sheet>
-                    <group string="Tipo Cedula" name="group_top">
-                        <group name="group_left">
-                            <field name="ced" required="True"/>
-                        </group>
-                        <group name="group_right">
-                        </group>
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_company_inherit_model" model="ir.ui.view">
+        <field name="name">res.company.form.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_groups_form"/>
+        <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group string="Tipo Cedula" name="group_top">
+                    <group name="group_left">
+                        <field name="ced" required="True"/>
                     </group>
-                </sheet>
-            </form>
-        </record>
+                    <group name="group_right">
+                    </group>
+                </group>
+            </sheet>
+        </form>
+    </record>
 
-        <!-- Action -->
-        <record id="action_view_cedula" model="ir.actions.act_window">
-            <field name="name">Modelo Tipo Cedula</field>
-            <field name="res_model">m.cedula</field>
-            <field name="view_mode">tree,form</field>
-        </record>
+    <!-- Action -->
+    <record id="action_view_cedula" model="ir.actions.act_window">
+        <field name="name">Modelo Tipo Cedula</field>
+        <field name="res_model">m.cedula</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
-        <!-- Menu -->
-        <menuitem
-            id="menu_cedula"
-            name="Tipo Cedula"
-            action="my_module.action_view_pais"
-            parent="menu_registro"
-        />
-    </data>
-</openerp>
- -->
+    <!-- Menu -->
+    <menuitem
+        id="menu_cedula"
+        name="Tipo Cedula"
+        action="my_module.action_view_pais"
+        parent="menu_registro"
+    />
+</odoo>

@@ -18,9 +18,9 @@ def _onchange_ced(self):
 @api.constrains('vat','ced')
 def _constrains_fieldname(self):
     for rec in self:
-        if rec.vat > 9 and rec.ced = 'Cedula Fisica':
+        if rec.vat > 9 and rec.ced == 'Cedula Fisica':
             raise UserError(_('La Cedula Fisica tiene que ser de 9 digitos'))
-        elif rec.vat < 11 and rec.ced = 'Cedula Juridica':
+        elif rec.vat < 11 and rec.ced == 'Cedula Juridica':
             raise UserError(_('La Cedula Juridica tiene que ser de 11 digitos'))
 
 

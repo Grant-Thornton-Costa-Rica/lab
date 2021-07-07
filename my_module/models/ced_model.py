@@ -5,7 +5,7 @@ class Tipo_Cedula_Model(models.Model):
     _inherit = 'res.company'
     _description = 'Modulo Tipo Cedula'
 
-    ced = fields.Selection([('juridica', 'Cedula Juridica'), ('fisica', 'Cedula Fisica')], string="Tipo Cedula")
+    ced = fields.Selection([('juridica', 'Cedula Juridica'), ('fisica', 'Cedula Fisica')], 'Type', string="Tipo Cedula")
 
 @api.onchange('vat')
 def _onchange_ced(self):
@@ -18,9 +18,9 @@ def _onchange_ced(self):
 @api.constrains('vat','ced')
 def _constrains_fieldname(self):
     for rec in self:
-        if rec.vat > 9 and rec.ced == 'fisica':
+        if rec.vat >= 9 and rec.ced == 'juridica':
             raise UserError(_('La Cedula Fisica tiene que ser de 9 digitos'))
-        elif rec.vat < 11 and rec.ced == 'juridica':
+        elif rec.vat < 11 and rec.ced == 'fisica':
             raise UserError(_('La Cedula Juridica tiene que ser de 11 digitos'))
 
 

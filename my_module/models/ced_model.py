@@ -6,6 +6,7 @@ class Tipo_Cedula_Model(models.Model):
     _description = 'Modulo Tipo Cedula'
 
     ced = fields.Selection([('juridica', 'Cedula Juridica'), ('fisica', 'Cedula Fisica')], string="Tipo Cedula")
+    
     _sql_constraints = [
         ('check_vat_len', 'check(length(vat)<=11)', 'Debe ingresar al menos 10 digitos')
     ]

@@ -30,6 +30,7 @@
         'views/pais_view.xml',
         'views/detalle_view.xml',
         'views/ced_view.xml',
+        'views/accounting_view.xml',
         'views/registro_report.xml',
     ],
     # only loaded in demonstration mode

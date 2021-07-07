@@ -6,9 +6,7 @@ class Tipo_Cedula_Model(models.Model):
     _description = 'Modulo Tipo Cedula'
 
     ced = fields.Selection([('juridica', 'Cedula Juridica'), ('fisica', 'Cedula Fisica')], string="Tipo Cedula")
-    _constraints = [
-        (_check_len_vat, 'La longitud debe ser igual o mayor a 9 digitos', ['var'])
-    ]
+    
 
 @api.onchange('vat')
 def _onchange_ced(self):
@@ -31,6 +29,10 @@ def _check_len_vat(self, cr, uid, ids, context=None):
         if len(rec.vat) < 9:
             return True
     return False
+
+_constraints = [
+    (_check_len_vat, 'La longitud debe ser igual o mayor a 9 digitos', ['var'])
+]
 
 
 

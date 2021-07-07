@@ -31,10 +31,11 @@ def _check_len_vat(self, cr, uid, ids, context=None):
     for rec in self.browse(cr, uid, ids, context=context):
         if len(rec.vat) < 9:
             return True
+            print('Menor a 9')
     return False
 
 _constraints = [
-    (_check_len_vat, 'La longitud debe ser igual o mayor a 9 digitos', ['var'])
+    (_check_len_vat, 'La longitud debe ser igual o mayor a 9 digitos', ['vat'])
 ]
 
 

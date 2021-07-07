@@ -1,16 +1,11 @@
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, ValidationError
 from odoo import models, fields, api, _
 
 class Tipo_Cedula_Model(models.Model):
     _inherit = 'res.company'
     _description = 'Modulo Tipo Cedula'
 
-    ced = fields.Selection([('juridica', 'Cedula Juridica'), ('fisica', 'Cedula Fisica')], string="Tipo Cedula")
-    
-    _sql_constraints = [
-        ('check_vat_len', 'check(length(vat)=11)', 'Debe ingresar al menos 10 digitos')
-    ]
-    
+    ced = fields.Selection([('juridica', 'Cedula Juridica'), ('fisica', 'Cedula Fisica')], string="Tipo Cedula")    
 
 @api.onchange('vat')
 def _onchange_ced(self):
@@ -38,6 +33,12 @@ def _check_len_vat(self, cr, uid, ids, context=None):
 _constraints = [
     (_check_len_vat, 'La longitud debe ser igual o mayor a 9 digitos', ['vat'])
 ]
+
+@api.constrains('vat')
+def _check_vat_len(self):
+    for rec in self:
+        if len(rec.vat) != 11:
+            raise ValidationError(_('Must be 11 Characters'))
 
 
 

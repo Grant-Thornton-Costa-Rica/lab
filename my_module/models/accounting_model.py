@@ -1,18 +1,17 @@
 from odoo import models, fields, api
 
-class Tipo_Cedula_Model(models.Model):
+class accountMoveModel(models.Model):
     _inherit = 'account.move'
     _description = 'Modulo Account'
 
     metodo_pago = fields.Selection([('efectivo', 'Efectivo'), ('credito', 'Tarjeta Credito'), ('debito', 'Tarjeta Debito')], string="Metodo Pago")
-    codigo_cabys = fields.Char('Codigo Cabys')
 
-    def _check_cabys(self, cr, uid, ids, context=None):
-        for rec in self.browse(cr, uid, ids, context=context):
+    def action_invoice_open(self):
+        if self.state == 'draft':
+            self._check_cabys()
+        super(accountMoveModel, self).action_invoice_open()
+
+    def _check_cabys(self):
+        for rec in self.invoice_line_ids:
             if rec.codigo_cabys and isinstance(rec.codigo_cabys, int):
-                return True
-        return False
-    
-    _constraints = [
-        (_check_cabys, 'El campo solo acepta valores numericos', ['codigo_cabys']),
-    ]
+                raise ValidationError("Debe ingresar solo numeros en Codigo Cabys")

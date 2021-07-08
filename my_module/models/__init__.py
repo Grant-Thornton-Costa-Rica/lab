@@ -6,4 +6,5 @@ from . import detalle_salidas_model
 from . import registro_salidas_model
 from . import ced_model
 from . import accounting_model
+from . import account_move_line
 

@@ -25,7 +25,7 @@ class accountMoveModel(models.Model):
     @api.model
     def create(self, vals):
         log.info('------------------------Entrando al metodo create------------------------')
-
+        log.info(vals)
         self._check_cabys()
         return super(accountMoveModel, self).create(vals)
 

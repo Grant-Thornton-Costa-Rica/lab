@@ -1,5 +1,7 @@
-from odoo import models, fields, api
+from odoo import models, fields, api,
 from odoo.exceptions import ValidationError
+import logging
+log = logging.getLogger(__name__)
 
 class accountMoveModel(models.Model):
     _inherit = 'account.move'
@@ -24,8 +26,11 @@ class accountMoveModel(models.Model):
     def create(self, vals):
         self._check_cabys()
         return super(accountMoveModel, self).create(vals)
-    
+
     def write(self, vals):
+        log.info('Entrando al metodo write')
         self._check_cabys()
         res = super(accountMoveModel, self).write(vals)
         return res
+        log.info('Saliendo del metodo write')
+

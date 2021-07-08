@@ -24,13 +24,15 @@ class accountMoveModel(models.Model):
 
     @api.model
     def create(self, vals):
+        log.info('------------------------Entrando al metodo create------------------------')
+
         self._check_cabys()
         return super(accountMoveModel, self).create(vals)
 
     def write(self, vals):
-        log.info('Entrando al metodo write')
+        log.info('------------------------Entrando al metodo write-------------------------')
         self._check_cabys()
         res = super(accountMoveModel, self).write(vals)
         return res
-        log.info('Saliendo del metodo write')
+        log.info('------------------------Saliendo del metodo write------------------------')
 

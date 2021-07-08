@@ -6,13 +6,15 @@ class accountMoveModel(models.Model):
 
     metodo_pago = fields.Selection([('efectivo', 'Efectivo'), ('credito', 'Tarjeta Credito'), ('debito', 'Tarjeta Debito')], string="Metodo Pago")
 
-    def action_invoice_open(self):
+    def action_post(self):
         if self.state == 'draft':
             self._check_cabys()
-        super(accountMoveModel, self).action_invoice_open()
+        super(accountMoveModel, self).action_post()
 
     def _check_cabys(self):
         for rec in self.invoice_line_ids:
             if rec.codigo_cabys:
                 if not isinstance(rec.codigo_cabys, int):
                     raise ValidationError("Debe ingresar solo numeros en Codigo Cabys")
+            else:
+                raise ValidationError("No existe el registro del Codigo Cabys")

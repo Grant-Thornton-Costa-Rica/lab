@@ -16,6 +16,7 @@ class accountMoveModel(models.Model):
 
     def _check_cabys(self, lineas):
         for rec in lineas:
+            log.info(rec)
             if rec.codigo_cabys:
                 if not isinstance(rec.codigo_cabys, int):
                     raise ValidationError("Debe ingresar solo numeros en Codigo Cabys")

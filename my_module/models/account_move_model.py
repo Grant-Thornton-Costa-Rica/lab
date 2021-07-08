@@ -28,6 +28,7 @@ class accountMoveModel(models.Model):
         self._check_cabys(vals['invoice_line_ids'])
         return super(accountMoveModel, self).create(vals)
 
+    @api.model
     def write(self, vals):
         self._check_cabys(vals['invoice_line_ids'])
         res = super(accountMoveModel, self).write(vals)

@@ -14,8 +14,8 @@ class accountMoveModel(models.Model):
             self._check_cabys()
         super(accountMoveModel, self).action_post()
 
-    def _check_cabys(self):
-        for rec in self.invoice_line_ids:
+    def _check_cabys(self, lineas):
+        for rec in lineas:
             if rec.codigo_cabys:
                 if not isinstance(rec.codigo_cabys, int):
                     raise ValidationError("Debe ingresar solo numeros en Codigo Cabys")
@@ -26,7 +26,7 @@ class accountMoveModel(models.Model):
     def create(self, vals):
         log.info('------------------------Entrando al metodo create------------------------')
         log.info(vals)
-        self._check_cabys()
+        self._check_cabys(vals['invoice_line_ids'])
         return super(accountMoveModel, self).create(vals)
 
     def write(self, vals):

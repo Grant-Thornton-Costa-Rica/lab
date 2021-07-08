@@ -14,5 +14,5 @@ class accountMoveModel(models.Model):
     def _check_cabys(self):
         for rec in self.invoice_line_ids:
             if rec.codigo_cabys:
-                if isinstance(rec.codigo_cabys, int):
+                if not isinstance(rec.codigo_cabys, int):
                     raise ValidationError("Debe ingresar solo numeros en Codigo Cabys")

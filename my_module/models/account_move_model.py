@@ -20,12 +20,10 @@ class accountMoveModel(models.Model):
             else:
                 raise ValidationError("No existe el registro del Codigo Cabys")
 
-    @api.model
     def create(self, vals):
         self._check_cabys()
         return super(accountMoveModel, self).create(vals)
 
-    @api.multi
     def write(self, vals):
         self._check_cabys()
         res = super(accountMoveModel, self).write(vals)

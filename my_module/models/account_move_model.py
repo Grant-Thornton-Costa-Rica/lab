@@ -14,26 +14,22 @@ class accountMoveModel(models.Model):
             self._check_cabys()
         super(accountMoveModel, self).action_post()
 
-    # def _check_cabys(self, lineas):
-    #     for rec in lineas:
-    #         cabys = (rec[2]['codigo_cabys'])
-    #         if cabys:
-    #             if not isinstance(cabys, int):
-    #                 raise ValidationError("Debe ingresar solo numeros en Codigo Cabys")
-    #         else:
-    #             raise ValidationError("No existe el registro del Codigo Cabys")
+    def _check_cabys(self, lineas):
+        for rec in lineas:
+            cabys = (rec[2]['codigo_cabys'])
+            if cabys:
+                if isinstance(cabys, int):
+                    raise ValidationError("Debe ingresar solo numeros en Codigo Cabys")
+            else:
+                raise ValidationError("No existe el registro del Codigo Cabys")
 
-    # @api.model
-    # def create(self, vals):
-    #     log.info('------------------------Entrando al metodo create------------------------')
-    #     log.info(vals)
-    #     self._check_cabys(vals['invoice_line_ids'])
-    #     return super(accountMoveModel, self).create(vals)
+    @api.model
+    def create(self, vals):
+        self._check_cabys(vals['invoice_line_ids'])
+        return super(accountMoveModel, self).create(vals)
 
-    # def write(self, vals):
-    #     log.info('------------------------Entrando al metodo write-------------------------')
-    #     self._check_cabys()
-    #     res = super(accountMoveModel, self).write(vals)
-    #     return res
-    #     log.info('------------------------Saliendo del metodo write------------------------')
+    def write(self, vals):
+        self._check_cabys()
+        res = super(accountMoveModel, self).write(vals)
+        return res
 

@@ -29,7 +29,7 @@ class accountMoveModel(models.Model):
         return super(accountMoveModel, self).create(vals)
 
     def write(self, vals):
-        self._check_cabys()
+        self._check_cabys(vals['invoice_line_ids'])
         res = super(accountMoveModel, self).write(vals)
         return res
 

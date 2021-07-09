@@ -13,7 +13,7 @@ class accountMoveModel(models.Model):
     def action_post(self, vals):
         if self.state == 'draft':
             self._check_cabys(vals['invoice_line_ids'])
-        super(accountMoveModel, self).action_post(vals)
+        super(accountMoveModel, self).action_post()
 
     def _check_cabys(self, lineas):
         for rec in lineas:

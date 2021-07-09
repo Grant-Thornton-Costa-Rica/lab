@@ -9,10 +9,11 @@ class accountMoveModel(models.Model):
 
     metodo_pago = fields.Selection([('efectivo', 'Efectivo'), ('credito', 'Tarjeta Credito'), ('debito', 'Tarjeta Debito')], string="Metodo Pago")
 
-    def action_post(self):
+    @api.model
+    def action_post(self, vals):
         if self.state == 'draft':
             self._check_cabys(vals['invoice_line_ids'])
-        super(accountMoveModel, self).action_post()
+        super(accountMoveModel, self).action_post(vals)
 
     def _check_cabys(self, lineas):
         for rec in lineas:

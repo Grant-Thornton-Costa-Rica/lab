@@ -30,7 +30,7 @@ class accountMoveModel(models.Model):
 
     def write(self, vals):
         for rec in self:
-            log.info("---------------- " + vals + " ------------------------")
+            log.info("---------------- " + str(vals) + " ------------------------")
             linea = self._check_cabys(vals['invoice_line_ids'])
             if linea:
                 linea

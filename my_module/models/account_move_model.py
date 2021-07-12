@@ -19,7 +19,7 @@ class accountMoveModel(models.Model):
         for rec in lineas:
             test = (rec[0])
             test1 = (rec[1])
-            test2 = (rec[3])
+            test2 = (rec[2])
             log.info("--------------------- " + str(test) + " ----------------------")
             log.info("--------------------- " + str(test1) + " ----------------------")
             log.info("--------------------- " + str(test2) + " ----------------------")

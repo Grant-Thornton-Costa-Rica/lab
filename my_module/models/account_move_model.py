@@ -19,8 +19,9 @@ class accountMoveModel(models.Model):
         for rec in lineas:
             log.info("--------------------- " + str(len(rec)) + " ----------------------")
             log.info("--------------------- " + str(rec[0]) + " ----------------------")
+            log.info("--------------------- " + str(rec) + " ----------------------")
             log.info("--------------------- " + str(len(lineas)) + " ----------------------")
-            log.info("--------------------- " + lineas[0]['codigo_cabys'] + " ----------------------")
+            log.info("--------------------- " + str(lineas[0]['codigo_cabys']) + " ----------------------")
             if obj:
                 cabys = rec.codigo_cabys
             else:

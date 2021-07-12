@@ -16,7 +16,6 @@ class accountMoveModel(models.Model):
 
     def _check_cabys(self, lineas):
         for rec in lineas:
-            log.info("---------------- " + rec + " ------------------------")
             cabys = (rec[2]['codigo_cabys'])
             if cabys:
                 if not cabys.isdigit():
@@ -31,6 +30,7 @@ class accountMoveModel(models.Model):
 
     def write(self, vals):
         for rec in self:
+            log.info("---------------- " + vals + " ------------------------")
             linea = self._check_cabys(vals['invoice_line_ids'])
             if linea:
                 linea

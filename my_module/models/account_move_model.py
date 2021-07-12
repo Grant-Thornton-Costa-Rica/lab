@@ -21,7 +21,7 @@ class accountMoveModel(models.Model):
             if obj:
                 cabys = rec.codigo_cabys
             else:
-                cabys = (rec[25]['codigo_cabys'])
+                cabys = (rec[6]['codigo_cabys'])
             if cabys:
                 if not cabys.isdigit():
                     raise ValidationError("Debe ingresar solo numeros en Codigo Cabys")

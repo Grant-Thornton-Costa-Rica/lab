@@ -17,8 +17,8 @@ class accountMoveModel(models.Model):
 
     def _check_cabys(self, lineas, obj = False):
         for rec in lineas:
-            test = (rec[0])
-            test1 = (rec[1])
+            test2 = (rec[0])
+            test2 = (rec[1])
             test2 = (rec[2])
             log.info("--------------------- " + str(test) + " ----------------------")
             log.info("--------------------- " + str(test1) + " ----------------------")
@@ -40,7 +40,7 @@ class accountMoveModel(models.Model):
 
     def write(self, vals):
         for rec in self:
-            linea = self._check_cabys(vals['invoice_line_ids'])
+            linea = self._check_cabys(vals['line_ids'])
             if linea:
                 linea
                 return super(accountMoveModel, self).write(vals)

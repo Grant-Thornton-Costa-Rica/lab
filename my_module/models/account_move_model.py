@@ -32,7 +32,9 @@ class accountMoveModel(models.Model):
 
     @api.model
     def write(self, vals):
-        self._check_cabys(vals['invoice_line_ids'])
-        res = super(accountMoveModel, self).write(vals)
-        return res
-
+        for rec in self:
+            log.info("Write method: ------------------------ " + linea + " ----------------------" )
+            linea = self._check_cabys(vals['invoice_line_ids'])
+            if linea:
+                linea
+                return super(accountMoveModel, self).write(vals)

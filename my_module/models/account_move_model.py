@@ -17,7 +17,7 @@ class accountMoveModel(models.Model):
 
     def _check_cabys(self, lineas, obj = False):
         for rec in lineas:
-            test = (lineas[1])
+            test = (lineas[6])
             log.info("--------------------- " + str(test) + " ----------------------")
             if obj:
                 cabys = rec.codigo_cabys

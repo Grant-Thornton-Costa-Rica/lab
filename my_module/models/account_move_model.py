@@ -21,7 +21,7 @@ class accountMoveModel(models.Model):
             log.info("--------------------- " + str(rec[0]) + " ----------------------")
             log.info("--------------------- " + str(rec) + " ----------------------")
             log.info("--------------------- " + str(len(lineas)) + " ----------------------")
-            log.info("--------------------- " + str(lineas[0]['codigo_cabys']) + " ----------------------")
+            log.info("--------------------- " + str(lineas[0]) + " ----------------------")
             if obj:
                 cabys = rec.codigo_cabys
             else:
@@ -39,7 +39,7 @@ class accountMoveModel(models.Model):
 
     def write(self, vals):
         for rec in self:
-            linea = self._check_cabys(vals['invoice_line_ids'])
+            linea = self._check_cabys(vals['line_ids'])
             if linea:
                 linea
                 return super(accountMoveModel, self).write(vals)

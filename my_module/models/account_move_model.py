@@ -9,15 +9,14 @@ class accountMoveModel(models.Model):
 
     metodo_pago = fields.Selection([('efectivo', 'Efectivo'), ('credito', 'Tarjeta Credito'), ('debito', 'Tarjeta Debito')], string="Metodo Pago")
 
-    @api.model
     def action_post(self):
         # if self.state == 'draft':
         # self._check_cabys(vals['invoice_line_ids'])
-        super(accountMoveModel, self).action_post()
+        return super(accountMoveModel, self).action_post()
 
     def _check_cabys(self, lineas):
         for rec in lineas:
-            log.info("---------------- " + (rec[2]['codigo_cabys']) + " ------------------------")
+            log.info("---------------- " + rec + " ------------------------")
             cabys = (rec[2]['codigo_cabys'])
             if cabys:
                 if not cabys.isdigit():
@@ -33,7 +32,6 @@ class accountMoveModel(models.Model):
     def write(self, vals):
         for rec in self:
             linea = self._check_cabys(vals['invoice_line_ids'])
-            log.info("---------------- " + linea + " ------------------------")
             if linea:
                 linea
                 return super(accountMoveModel, self).write(vals)

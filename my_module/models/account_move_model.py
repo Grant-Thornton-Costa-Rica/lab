@@ -11,7 +11,7 @@ class accountMoveModel(models.Model):
 
     @api.model
     def action_post(self):
-        if self.state == 'draft':
+        # if self.state == 'draft':
         # self._check_cabys(vals['invoice_line_ids'])
         super(accountMoveModel, self).action_post()
 

@@ -10,13 +10,17 @@ class accountMoveModel(models.Model):
     metodo_pago = fields.Selection([('efectivo', 'Efectivo'), ('credito', 'Tarjeta Credito'), ('debito', 'Tarjeta Debito')], string="Metodo Pago")
 
     def action_post(self):
-        # if self.state == 'draft':
-        # self._check_cabys(vals['invoice_line_ids'])
+        log.info("--------------------- " + str(self) + " ----------------------")
+        if self.state == 'draft':
+            self._check_cabys(self.invoice_line_ids, True)
         return super(accountMoveModel, self).action_post()
 
-    def _check_cabys(self, lineas):
+    def _check_cabys(self, lineas, obj = False):
         for rec in lineas:
-            cabys = (rec[2]['codigo_cabys'])
+            if obj:
+                cabys = rec.codigo_cabys
+            else:
+                cabys = (rec[2]['codigo_cabys'])
             if cabys:
                 if not cabys.isdigit():
                     raise ValidationError("Debe ingresar solo numeros en Codigo Cabys")
@@ -30,8 +34,7 @@ class accountMoveModel(models.Model):
 
     def write(self, vals):
         for rec in self:
-            log.info("---------------- " + str(vals) + " ------------------------")
-            linea = self._check_cabys(vals['invoice_line_ids'])
+            linea = self._check_cabys(vals['line_ids'])
             if linea:
                 linea
                 return super(accountMoveModel, self).write(vals)

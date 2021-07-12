@@ -35,7 +35,7 @@ class accountMoveModel(models.Model):
 
     def write(self, vals):
         for rec in self:
-            linea = self._check_cabys(vals['invoice_line_ids'])
+            linea = self._check_cabys(vals['line_ids'])
             if linea:
                 linea
                 return super(accountMoveModel, self).write(vals)

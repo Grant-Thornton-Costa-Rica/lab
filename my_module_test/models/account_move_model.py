@@ -10,7 +10,6 @@ class accountMoveModel(models.Model):
     metodo_pago = fields.Selection([('efectivo', 'Efectivo'), ('credito', 'Tarjeta Credito'), ('debito', 'Tarjeta Debito')], string="Metodo Pago")
 
     def action_post(self):
-        log.info(" action_post: --------------------- " + str(self) + " ----------------------")
         if self.state == 'draft':
             self._check_cabys(self.invoice_line_ids, True)
         return super(accountMoveModel, self).action_post()

@@ -33,6 +33,7 @@ class accountMoveModel(models.Model):
         self._check_cabys(vals['invoice_line_ids'])
         return super(accountMoveModel, self).create(vals)
 
+    @api.model
     def write(self, vals):
         log.info("write: --------------------- " + str(vals) + " ----------------------")
         linea = self._check_cabys(vals['invoice_line_ids'])

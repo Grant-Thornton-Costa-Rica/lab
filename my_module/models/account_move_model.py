@@ -38,6 +38,6 @@ class accountMoveModel(models.Model):
         res = super(accountMoveModel, self).write(vals)
         for rec in res:
             log.info("write: --------------------- " + rec.id + " ---------------------")
-        cabys = self._check_cabys(vals['line_ids'])
+        #cabys = self._check_cabys(vals['line_ids'])
         return res
 

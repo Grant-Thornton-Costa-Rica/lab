@@ -24,8 +24,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/menu_views.xml',
         'views/payment_method_views.xml',
+        'views/menu_views.xml',
     ],
 
     'external_dependencies': {

@@ -36,8 +36,8 @@ class accountMoveModel(models.Model):
 
     @api.model
     def write(self, vals):
-        cabys = self._check_cabys(vals['line_ids'])
         log.info("write: --------------------- " + str(vals) + " ----------------------")
+        cabys = self._check_cabys(vals['line_ids'])
         for rec in self:
             if cabys:
                 cabys

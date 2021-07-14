@@ -1,6 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_activity_code,activity_code,model_activity_code,account.group_account_invoice,1,1,1,1
 access_payment_method,payment_method,model_payment_method,account.group_account_invoice,1,1,1,1
+access_identification_type,identification_type,model_identification_type,account.group_account_invoice,1,1,1,1
 access_res_country_canton,res_country_canton,model_res_country_canton,account.group_account_invoice,1,1,1,1
 access_res_country_district,res_country_district,model_res_country_district,account.group_account_invoice,1,1,1,1
 access_res_country_neighborhood,res_country_neighborhood,model_res_country_neighborhood,account.group_account_invoice,1,1,1,1

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="activity_code_view_form" model="ir.ui.view">
+    <field name="name">activity.code.view.form</field>
+    <field name="model">activity.code</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group>
+                   <group>
+                       <field name="code" required="True" />
+                       <field name="name" required="True" />
+                   </group>
+                   <group>
+                        <field name="active"/>
+                   </group>    
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+<record id="activity_code_view_tree" model="ir.ui.view">
+    <field name="name">activity.code.view.tree</field>
+    <field name="model">activity.code</field>
+    <field name="arch" type="xml">
+        <tree string="">
+             <field name="sequence" widget="handle"/>
+             <field name="code" />
+             <field name="name" />
+             <field name="active"/>
+        </tree>
+    </field>
+</record>
+    
+<record model="ir.actions.act_window" id="activity_code_action">
+      <field name="name">Actividad Económica</field>
+      <field name="res_model">activity.code</field>
+      <field name="view_mode">tree,form</field>
+</record>
+
+</odoo>
+
+
+

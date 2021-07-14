@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from . import res_company
+from . import activity_code
 from . import res_country_canton
 from . import res_country_district
 from . import res_country_neighborhood

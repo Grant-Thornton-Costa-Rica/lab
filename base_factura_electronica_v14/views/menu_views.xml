@@ -7,4 +7,14 @@
     <menuitem name="Método Pago" id="base_factura_electronica_v14.payment_method" parent="base_factura_electronica_v14.menu_root"  
     action="payment_method_action" sequence="2"/>
 
+    <!-- localization -->
+     <menuitem name="Cantón" id="base_factura_electronica_v14.res_country_canton" parent="contacts.menu_localisation"  
+    action="res_country_canton_action" sequence="2"/>
+
+     <menuitem name="Distrito" id="base_factura_electronica_v14.res_country_district" parent="contacts.menu_localisation"  
+    action="res_country_district_action" sequence="2"/>
+
+    <menuitem name="Barrio" id="base_factura_electronica_v14.res_country_neighborhood" parent="contacts.menu_localisation"  
+    action="res_country_neighborhood_action" sequence="2"/>
+
 </odoo>

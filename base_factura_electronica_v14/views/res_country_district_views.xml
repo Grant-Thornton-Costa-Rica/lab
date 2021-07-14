@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="res_country_district_view_form" model="ir.ui.view">
+    <field name="name">res.country.district.view.form</field>
+    <field name="model">res.country.district</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group>
+                   <group>
+                       <field name="code" required="True" />
+                       <field name="name" required="True" />
+                   </group>
+                   <group>
+                        <field name="canton_id" required="True"/>
+                   </group>    
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+
+<record id="res_country_district_view_tree" model="ir.ui.view">
+    <field name="name">res.country.district.view.tree</field>
+    <field name="model">res.country.district</field>
+    <field name="arch" type="xml">
+        <tree string="">
+             <field name="code"/>
+             <field name="name" />
+             <field name="canton_id"/>
+        </tree>
+    </field>
+</record>
+    
+<record model="ir.actions.act_window" id="res_country_district_action">
+      <field name="name">Distrito</field>
+      <field name="res_model">res.country.district</field>
+      <field name="view_mode">tree,form</field>
+</record>
+
+</odoo>

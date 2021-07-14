@@ -1,0 +1,102 @@
+<odoo>
+<record id="res_company_view_form_inherit" model="ir.ui.view">
+    <field name="name">res.company.view.form.inherit</field>
+    <field name="model">res.company</field>
+    <field name="inherit_id" ref="base.view_company_form"/>
+    <field name="arch" type="xml">
+         <field name="vat" position="before">
+            <field name="identification_type_id" required="True"/>
+         </field>
+         <xpath expr="//page" position="after">
+          <page name="name" string="Factura Electrónica">
+              <form>
+                <sheet>
+                    <group>
+                       <group>
+                          <field name="api_url" required="True"/>
+                          <field name="user" required="True"/>
+                          <field name="password" password="True" required="True"/>
+                        </group>
+                        <group>
+                           <field name="branch_office" required="True"/>
+                           <field name="terminal" required="True"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="activity_code_ids">
+                             <tree editable="1">
+                                  <field name="sequence" widget="handle"/>
+                                  <field name="code" required='1'/>
+                                  <field name="name" required='1'/>
+                             </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+          </page>
+         </xpath>
+
+          <xpath expr="//field[@name='country_id']" position="attributes">
+                <attribute name="attrs">
+                    {"invisible": True }
+                </attribute>
+            </xpath>
+  
+            <xpath expr="//field[@name='state_id']" position="attributes">
+                <attribute name="attrs">
+                    {"invisible": [["country_code","=","CR"]] }
+                </attribute>
+                <attribute name="placeholder">Provincia</attribute>
+            </xpath>
+  
+            <xpath expr="//field[@name='city']" position="attributes">
+                <attribute name="attrs">
+                    {"invisible": [["country_code","=","CR"]] }
+                </attribute>
+            </xpath>
+  
+            <xpath expr="//field[@name='zip']" position="attributes">
+                <attribute name="attrs">
+                    {"invisible": [["country_code","=","CR"]] }
+                </attribute>
+            </xpath>
+  
+            <xpath expr="//field[@name='street']" position="attributes">
+                <attribute name="placeholder">Otras señas</attribute>
+                <attribute name="attrs">
+                    {'required':[('country_code','=','CR')]}
+                </attribute>
+            </xpath>
+            
+            <xpath expr="//field[@name='street2']" position="attributes">
+                <attribute name="placeholder">Otras señas2</attribute>
+            </xpath>
+  
+        <field name="street" position="before">
+          <field name="country_code" invisible="True"/>
+          <field name="country_id" string="País"
+                   options="{'no_create': True, 'no_create_edit': True}"
+                   placeholder="Country Code"/>
+            
+            <field name="state_id" string="Provincia" placeholder="Provincia"
+                domain="[('country_id', '=',country_id)]" options="{'no_create': True, 'no_create_edit': True}"
+                attrs="{'invisible':[('country_code', '!=', 'CR')],'required':[('country_code','=','CR')]}" />
+            
+            <field name="canton_id" string="Canton" placeholder="Canton" readonly="0" domain="[('state_id', '=',state_id)]"
+                options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
+                 attrs="{'invisible':[('country_code', '!=', 'CR')],'required':[('country_code','=','CR')]}"  />
+
+            
+            <field name="district_id" string="Distrito" placeholder="Distrito"  readonly="0" domain="[('canton_id', '=',canton_id)]" 
+                options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
+                 attrs="{'invisible':[('country_code', '!=', 'CR')],'required':[('country_code','=','CR')]}"  />
+            
+            <field name="neighborhood_id" string="Barrio" placeholder="Barrio"  readonly="0" domain="[('district_id', '=',district_id)]"
+                options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
+                 attrs="{'invisible':[('country_code', '!=', 'CR') ]}"  />
+           
+       </field>
+
+    </field>
+</record>
+</odoo>

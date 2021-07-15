@@ -32,7 +32,7 @@
         'views/res_country_canton_views.xml',
         'views/res_country_district_views.xml',
         'views/res_country_neighborhood_views.xml',
-        # 'views/res_company_views.xml',
+        'views/res_company_views.xml',
         'views/activity_code_views.xml',
         'views/menu_views.xml',
         'security/ir.model.access.csv',

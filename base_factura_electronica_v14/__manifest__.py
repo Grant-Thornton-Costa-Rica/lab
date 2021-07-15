@@ -23,10 +23,10 @@
 
     # always loaded
     'data': [
-        'data/res.country.state.csv',
-        'data/res.country.canton.csv',
-        'data/res.country.district.csv',
-        'data/res.country.neighborhood.csv',
+        # 'data/res.country.state.csv',
+        # 'data/res.country.canton.csv',
+        # 'data/res.country.district.csv',
+        # 'data/res.country.neighborhood.csv',
         'views/payment_method_views.xml',
         'views/identification_type_views.xml',
         'views/res_country_canton_views.xml',

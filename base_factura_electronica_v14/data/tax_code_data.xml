@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="tax_code_01" model="tax.code">
+            <field name="code">01</field>
+            <field name="name">Impuesto al Valor Agregado</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_code_02" model="tax.code">
+            <field name="code">02</field>
+            <field name="name">Impuesto Selectivo de Consumo</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_code_03" model="tax.code">
+            <field name="code">03</field>
+            <field name="name">Impuesto Único a los Combustibles</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_code_04" model="tax.code">
+            <field name="code">04</field>
+            <field name="name">Impuesto específico de Bebidas Alcohólicas</field>
+            <field name="active">True</field>
+        </record>
+
+         <record id="tax_code_05" model="tax.code">
+            <field name="code">05</field>
+            <field name="name">Impuesto Específico sobre las bebidas envasadas sin
+contenido alcohólico y jabones de tocador</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_code_06" model="tax.code">
+            <field name="code">06</field>
+            <field name="name">Impuesto a los Productos de Tabaco</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_code_07" model="tax.code">
+            <field name="code">07</field>
+            <field name="name">IVA (cálculo especial)</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_code_08" model="tax.code">
+            <field name="code">08</field>
+            <field name="name">IVA Régimen de Bienes Usados (Factor)</field>
+            <field name="active">True</field>
+        </record>
+
+         <record id="tax_code_12" model="tax.code">
+            <field name="code">12</field>
+            <field name="name">Impuesto Específico al Cemento</field>
+            <field name="active">True</field>
+        </record>
+
+         <record id="tax_code_99" model="tax.code">
+            <field name="code">99</field>
+            <field name="name">Otros</field>
+            <field name="active">True</field>
+        </record>
+
+    </data>
+</odoo>

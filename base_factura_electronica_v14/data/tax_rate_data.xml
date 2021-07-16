@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="tax_rate_01" model="tax.rate">
+            <field name="code">01</field>
+            <field name="name">Tarifa 0% (Exento)</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_rate_02" model="tax.rate">
+            <field name="code">02</field>
+            <field name="name">Tarifa reducida 1%</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_rate_03" model="tax.rate">
+            <field name="code">03</field>
+            <field name="name">Tarifa reducida 2%</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_rate_04" model="tax.rate">
+            <field name="code">04</field>
+            <field name="name">Tarifa reducida 4%</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_rate_05" model="tax.rate">
+            <field name="code">05</field>
+            <field name="name">Transitorio 0%</field>
+            <field name="active">True</field>
+        </record>
+
+         <record id="tax_rate_06" model="tax.rate">
+            <field name="code">06</field>
+            <field name="name">Transitorio 4%</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_rate_07" model="tax.rate">
+            <field name="code">07</field>
+            <field name="name">Transitorio 8%</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="tax_rate_08" model="tax.rate">
+            <field name="code">08</field>
+            <field name="name">Tarifa general 13%</field>
+            <field name="active">True</field>
+        </record>
+        
+
+    </data>
+</odoo>

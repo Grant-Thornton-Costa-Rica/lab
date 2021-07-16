@@ -24,8 +24,9 @@
     # always loaded
     'data': [
         'data/identification_type_data.xml',
-        'data/sale_condition_data.xml',
+        # 'data/sale_condition_data.xml',
         'data/payment_method_data.xml',
+        # 'data/document_type_data.xml',
         'data/res.country.state.csv',
         'data/res.country.canton.csv',
         'data/res.country.district.csv',
@@ -34,6 +35,7 @@
         'views/sale_condition_views.xml',
         'views/payment_method_views.xml',
         'views/identification_type_views.xml',
+        'views/document_type_views.xml',
         'views/res_country_canton_views.xml',
         'views/res_country_district_views.xml',
         'views/res_country_neighborhood_views.xml',

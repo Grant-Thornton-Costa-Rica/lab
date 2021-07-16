@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="document_type_01" model="document.type">
+            <field name="code">01</field>
+            <field name="name">Factura electrónica</field>
+            <field name="active">True</field>
+        </record>
+        <record id="document_type_02" model="document.type">
+            <field name="code">02</field>
+            <field name="name">Nota de débito electrónica</field>
+            <field name="active">True</field>
+        </record>
+        <record id="document_type_03" model="document.type">
+            <field name="code">03</field>
+            <field name="name">Nota de crédito electrónica</field>
+            <field name="active">True</field>
+        </record>
+        <record id="document_type_04" model="document.type">
+            <field name="code">04</field>
+            <field name="name">Tiquete Electrónico</field>
+            <field name="active">True</field>
+        </record>
+         <record id="document_type_08" model="document.type">
+            <field name="code">08</field>
+            <field name="name">Factura electrónica de compra</field>
+            <field name="active">True</field>
+        </record>
+         <record id="document_type_09" model="document.type">
+            <field name="code">09</field>
+            <field name="name">Factura electrónica de exportación</field>
+            <field name="active">True</field>
+        </record>
+        <record id="document_type_09" model="document.type">
+            <field name="code">99</field>
+            <field name="name">Registro interno</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

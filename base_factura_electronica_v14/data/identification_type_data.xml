@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="identification_01" model="identification.type">
+            <field name="code">01</field>
+            <field name="name">Cédula Física</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="identification_02" model="identification.type">
+            <field name="code">02</field>
+            <field name="name">Cédula Jurídica</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="identification_03" model="identification.type">
+            <field name="code">03</field>
+            <field name="name">DIMEX</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="identification_04" model="identification.type">
+            <field name="code">04</field>
+            <field name="name">NITE</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="identification_99" model="identification.type">
+            <field name="code">99</field>
+            <field name="name">Extranjero</field>
+            <field name="active">True</field>
+        </record>
+
+    </data>
+</odoo>

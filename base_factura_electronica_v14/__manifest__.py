@@ -24,9 +24,9 @@
     # always loaded
     'data': [
         'data/identification_type_data.xml',
-        # 'data/sale_condition_data.xml',
+        'data/sale_condition_data.xml',
         'data/payment_method_data.xml',
-        # 'data/document_type_data.xml',
+        'data/document_type_data.xml',
         'data/res.country.state.csv',
         'data/res.country.canton.csv',
         'data/res.country.district.csv',

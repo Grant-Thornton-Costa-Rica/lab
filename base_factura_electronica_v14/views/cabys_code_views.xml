@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cabys_code_view_form" model="ir.ui.view">
+        <field name="name">cabys.code.view.form</field>
+        <field name="model">cabys.code</field>
+        <field name="arch" type="xml">
+            <form string="">
+             <sheet>
+                <group>
+                   <group>
+                       <field name="code" required="True" />
+                       <field name="name" required="True" />
+                       <field name="tax"/>
+                       <field name="active"/>
+                   </group>
+                   <group>
+                     <field name="category1" readonly="True"/>
+                     <field name="category2" readonly="True"/>
+                     <field name="category3" readonly="True"/>
+                     <field name="category4" readonly="True"/>
+                     <field name="category5" readonly="True"/>
+                     <field name="category6" readonly="True"/>
+                     <field name="category7" readonly="True"/>
+                     <field name="category8" readonly="True"/>
+                   </group>    
+                </group>
+              </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="cabys_code_view_tree" model="ir.ui.view">
+      <field name="name">cabys.code.view.tree</field>
+      <field name="model">cabys.code</field>
+      <field name="arch" type="xml">
+        <tree string="">
+          <field name="display_name"/>
+          <field name="tax" />
+        </tree>
+      </field>
+    </record>
+    
+    <record id="cabys_code_view_search" model="ir.ui.view">
+      <field name="name">cabys.code.view.search</field>
+      <field name="model">cabys.code</field>
+      <field name="arch" type="xml">
+        <search string="">
+              <field name="code" string="Código" filter_domain="[('code','ilike',self)]"/>
+              <field name="name" string="Descripción" filter_domain="[('name','ilike',self)]"/>
+              <filter name="group_by_category1" string="Categoría 1" context="{'group_by':'category1'}"/>
+              <filter name="group_by_category2" string="Categoría 2" context="{'group_by':'category2'}"/>
+              <filter name="group_by_category3" string="Categoría 3" context="{'group_by':'category3'}"/>
+              <filter name="group_by_category4" string="Categoría 4" context="{'group_by':'category4'}"/>
+              <filter name="group_by_category5" string="Categoría 5" context="{'group_by':'category5'}"/>
+              <filter name="group_by_category6" string="Categoría 6" context="{'group_by':'category6'}"/>
+              <filter name="group_by_category7" string="Categoría 7" context="{'group_by':'category7'}"/>
+              <filter name="group_by_category8" string="Categoría 8" context="{'group_by':'category8'}"/>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="cabys_code_action">
+      <field name="name">Codigo Cabys</field>
+      <field name="res_model">cabys.code</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

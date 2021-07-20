@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="exoneration_document_01" model="exoneration.document">
+            <field name="code">01</field>
+            <field name="name">Compras autorizadas</field>
+            <field name="active">True</field>
+        </record>
+         <record id="exoneration_document_02" model="exoneration.document">
+            <field name="code">02</field>
+            <field name="name">Ventas exentas a diplomáticos</field>
+            <field name="active">True</field>
+        </record>
+        <record id="exoneration_document_03" model="exoneration.document">
+            <field name="code">03</field>
+            <field name="name">Autorizado por Ley especia</field>
+            <field name="active">True</field>
+        </record>
+        <record id="exoneration_document_04" model="exoneration.document">
+            <field name="code">04</field>
+            <field name="name">Exenciones Dirección General de Hacienda</field>
+            <field name="active">True</field>
+        </record>
+         <record id="exoneration_document_05" model="exoneration.document">
+            <field name="code">05</field>
+            <field name="name">Transitorio V</field>
+            <field name="active">True</field>
+        </record>
+         <record id="exoneration_document_06" model="exoneration.document">
+            <field name="code">06</field>
+            <field name="name">Transitorio IX</field>
+            <field name="active">True</field>
+        </record>
+         <record id="exoneration_document_07" model="exoneration.document">
+            <field name="code">07</field>
+            <field name="name">Transitorio XVII</field>
+            <field name="active">True</field>
+        </record>
+         <record id="exoneration_document_99" model="exoneration.document">
+            <field name="code">99</field>
+            <field name="name">Otros</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

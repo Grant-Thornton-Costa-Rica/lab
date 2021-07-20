@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="reference_document_01" model="reference.document">
+            <field name="code">01</field>
+            <field name="name">Factura electrónica</field>
+            <field name="active">True</field>
+        </record>
+        <record id="reference_document_02" model="reference.document">
+            <field name="code">02</field>
+            <field name="name">Nota de débito electrónica</field>
+            <field name="active">True</field>
+        </record>
+         <record id="reference_document_03" model="reference.document">
+            <field name="code">03</field>
+            <field name="name">Nota de crédito electrónica</field>
+            <field name="active">True</field>
+        </record>
+        <record id="reference_document_04" model="reference.document">
+            <field name="code">04</field>
+            <field name="name">Tiquete electrónico</field>
+            <field name="active">True</field>
+        </record>
+         <record id="reference_document_05" model="reference.document">
+            <field name="code">05</field>
+            <field name="name">Nota de despacho</field>
+            <field name="active">True</field>
+        </record>
+        <record id="reference_document_06" model="reference.document">
+            <field name="code">06</field>
+            <field name="name">Contrato</field>
+            <field name="active">True</field>
+        </record>
+        <record id="reference_document_07" model="reference.document">
+            <field name="code">07</field>
+            <field name="name">Procedimiento</field>
+            <field name="active">True</field>
+        </record>
+        <record id="reference_document_08" model="reference.document">
+            <field name="code">08</field>
+            <field name="name">Comprobante emitido en contingencia</field>
+            <field name="active">True</field>
+        </record>
+        <record id="reference_document_09" model="reference.document">
+            <field name="code">09</field>
+            <field name="name">Devolución mercadería</field>
+            <field name="active">True</field>
+        </record>
+        <record id="reference_document_10" model="reference.document">
+            <field name="code">10</field>
+            <field name="name">Sustituye factura rechazada por el Ministerio de Hacienda</field>
+            <field name="active">True</field>
+        </record>
+         <record id="reference_document_11" model="reference.document">
+            <field name="code">11</field>
+            <field name="name">Sustituye factura rechazada por el Receptor del comprobante</field>
+            <field name="active">True</field>
+        </record>
+         <record id="reference_document_12" model="reference.document">
+            <field name="code">12</field>
+            <field name="name">Sustituye Factura de exportación</field>
+            <field name="active">True</field>
+        </record>
+         <record id="reference_document_13" model="reference.document">
+            <field name="code">13</field>
+            <field name="name">Facturación mes vencido</field>
+            <field name="active">True</field>
+        </record>
+         <record id="reference_document_14" model="reference.document">
+            <field name="code">14</field>
+            <field name="name">Comprobante aportado por contribuyente del Régimen de Tributación Simplificado</field>
+            <field name="active">True</field>
+        </record>
+        <record id="reference_document_15" model="reference.document">
+            <field name="code">15</field>
+            <field name="name">Sustituye una Factura electrónica de Compra</field>
+            <field name="active">True</field>
+        </record>
+        <record id="reference_document_99" model="reference.document">
+            <field name="code">99</field>
+            <field name="name">Otros</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

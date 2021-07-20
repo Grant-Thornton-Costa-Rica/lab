@@ -9,4 +9,10 @@ from . import res_company
 from . import res_country_canton
 from . import res_country_district
 from . import res_country_neighborhood
+from . import tax_code
+from . import tax_rate
+from . import product_code_type
+from . import reference_document
+from . import reference_code
+from . import exoneration_document
 from . import util_web_services

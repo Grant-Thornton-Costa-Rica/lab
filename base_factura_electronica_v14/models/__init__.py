@@ -15,4 +15,5 @@ from . import product_code_type
 from . import reference_document
 from . import reference_code
 from . import exoneration_document
+from . import cabys_code
 from . import util_web_services

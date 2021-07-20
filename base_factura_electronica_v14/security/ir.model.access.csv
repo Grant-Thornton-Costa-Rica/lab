@@ -13,4 +13,5 @@ access_product_code_type,product_code_type,model_product_code_type,account.group
 access_reference_document,reference_document,model_reference_document,account.group_account_invoice,1,1,1,1
 access_reference_code,reference_code,model_reference_code,account.group_account_invoice,1,1,1,1
 access_exoneration_document,exoneration_document,model_exoneration_document,account.group_account_invoice,1,1,1,1
+access_cabys_code,cabys_code,model_cabys_code,account.group_account_invoice,1,1,1,1
 

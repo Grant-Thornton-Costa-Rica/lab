@@ -33,7 +33,7 @@ class productTemplate(models.Model):
             return {
                    'domain':{'uom_id': [('is_services','=',False)],'uom_po_id':[('is_services','=',False)]},
                    }
-    @api.multi
+
     def unlink(self):
         for record in self:
             if record.dont_delete:

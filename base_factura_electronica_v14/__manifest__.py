@@ -50,6 +50,7 @@
         'views/tax_code_views.xml',
         'views/tax_rate_views.xml',
         'views/product_code_type_views.xml',
+        'views/product_template_views.xml',
         'views/reference_document_views.xml',
         'views/reference_code_views.xml',
         'views/exoneration_document_views.xml',

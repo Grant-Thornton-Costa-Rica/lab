@@ -11,6 +11,7 @@ from . import res_country_district
 from . import res_country_neighborhood
 from . import tax_code
 from . import tax_rate
+from . import product_template
 from . import product_code_type
 from . import reference_document
 from . import reference_code

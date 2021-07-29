@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_move_inherited_model" model="ir.ui.view">
+        <field name="name">account.move.inherited</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <field name="activity_code" position="after">
+                <field name="activity_code_id" position="after" required="True"/>
+            </field>
+            <field name="document_type" position="after">
+                <field name="document_type_id" position="after" required="True"/>
+            </field>
+            <field name="payment_method" position="after">
+                <field name="payment_method_id" position="after" required="True"/>
+            </field>
+        </field>
+    </record>
+</odoo>

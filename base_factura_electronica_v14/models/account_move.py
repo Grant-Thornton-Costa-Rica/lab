@@ -8,8 +8,8 @@ import re
 import logging
 log = logging.getLogger(__name__)
 
-class accountInvoice(models.Model):
-    _inherit = 'account.invoice'
+class accountMove(models.Model):
+    _inherit = 'account.move'
 
     numeric_key = fields.Char(string='Clave númerica',copy=False)
     consecutive = fields.Char(string='Número Consecutivo',copy=False)
@@ -278,7 +278,7 @@ class accountInvoice(models.Model):
                 'date_issued': date,
                 'invoice_state':invoice_state,
             })
-        super(accountInvoice, self).action_invoice_open()
+        super(accountMove, self).action_invoice_open()
 
     def partner_validation(self):
         if self.document_type_id.code != "04":

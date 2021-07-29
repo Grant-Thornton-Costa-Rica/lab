@@ -2,7 +2,7 @@
 <odoo>
     <record id="account_invoice_view_form_inherit" model="ir.ui.view">
         <field name="name">account.invoice.view.form.inherit</field>
-        <field name="model">account.invoice</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="account.invoice_form"/>
         <field name="arch" type="xml">
             <xpath expr="//header/button[@name='264']" position="after">
@@ -63,7 +63,7 @@
 
     <record id="account_invoice_tree_view_tree" model="ir.ui.view">
         <field name="name">account.invoice.tree.view.tree</field>
-        <field name="model">account.invoice</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="account.invoice_tree"/>
         <field name="arch" type="xml">
             <field name="number" position="after">
@@ -78,7 +78,7 @@
     <!-- Supplier-->
     <record id="account_invoice_supplier_form_inherit" model="ir.ui.view">
         <field name="name">account.invoice.supplier.form.inherit</field>
-        <field name="model">account.invoice</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="account.invoice_supplier_form"/>
         <field name="arch" type="xml">
           <xpath expr="//header/button[@name='264']" position="after">
@@ -121,7 +121,7 @@
 
     <record id="account_invoice_supplier_view_tree" model="ir.ui.view">
         <field name="name">account.invoice.supplier.view.tree</field>
-        <field name="model">account.invoice</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="account.invoice_supplier_tree"/>
         <field name="arch" type="xml">
             <field name="number" position="after">
@@ -136,7 +136,7 @@
     <!--Search-->
     <record id="account_invoice_filter_view_search" model="ir.ui.view">
         <field name="name">account_invoice_filter.view.search</field>
-        <field name="model">account.invoice</field>
+        <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_account_invoice_filter"/>
         <field name="arch" type="xml">
             <field name="number" position="after">
@@ -159,7 +159,7 @@
     
     <record id="debit_note_action" model="ir.actions.act_window">
       <field name="name">Nota Débito</field>
-      <field name="res_model">account.invoice</field>
+      <field name="res_model">account.move</field>
       <field name="view_mode">tree,form</field>
       <field name="domain">[('type', '=', 'out_invoice'),('is_debit_note','=',True)]</field>
       <field name="context">{'default_type':'out_invoice','default_is_debit_note':True}</field>
@@ -188,8 +188,8 @@
     <!--Server Action-->
        <record model="ir.actions.server" id="action_server_account_invoice">
       <field name="name">Reprocesar documentos</field>
-      <field name="model_id" ref="FacturaElectronicaV12.model_account_invoice"/>
-      <field name="binding_model_id" ref="FacturaElectronicaV12.model_account_invoice"/>
+      <field name="model_id" ref="base_factura_electronica_v14.model_account_move"/>
+      <field name="binding_model_id" ref="base_factura_electronica_v14.model_account_move"/>
       <field name="binding_view_types">tree</field>
       <field name="state">code</field>
       <field name="code">

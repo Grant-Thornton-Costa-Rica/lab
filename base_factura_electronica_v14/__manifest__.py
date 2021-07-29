@@ -47,6 +47,7 @@
         'views/res_country_canton_views.xml',
         'views/res_country_district_views.xml',
         'views/res_country_neighborhood_views.xml',
+        'views/account_invoice_views.xml',
         'views/tax_code_views.xml',
         'views/tax_rate_views.xml',
         'views/product_code_type_views.xml',

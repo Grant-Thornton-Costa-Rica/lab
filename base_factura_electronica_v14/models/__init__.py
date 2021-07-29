@@ -9,6 +9,7 @@ from . import res_company
 from . import res_country_canton
 from . import res_country_district
 from . import res_country_neighborhood
+from . import account_invoice
 from . import tax_code
 from . import tax_rate
 from . import product_template

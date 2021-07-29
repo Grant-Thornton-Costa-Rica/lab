@@ -353,8 +353,6 @@ class accountInvoice(models.Model):
                 if not record.third_party_id:
                      raise ValidationError("Porfavor agregue un tercero para las lineas 'Otros Cargos: Cobro de un tercero'")
 
-               
-    @api.multi
     @api.returns('self')
     def refund(self, date_invoice=None, date=None, description=None, journal_id=None,reference_document_id=None,reference_code_id=None,related_document=None,payment_method_id=None,payment_term_id=None):
         new_invoices = self.browse()

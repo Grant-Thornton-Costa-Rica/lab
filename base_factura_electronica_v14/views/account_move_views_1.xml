@@ -14,6 +14,20 @@
             <field name="document_type_id" position="after">
                 <field name="payment_method_id" position="after" required="True"/>
             </field>
+            <xpath expr="//page[last()]" position="after">
+                <field name="document_code" invisible="1"/>
+                <page name="name" string="Comprobantes" attrs="{'invisible':[('document_code','=','99')]}">
+                    <group>
+                        <field name="pdf_invoice_fname" invisible="1"/>
+                        <field name="pdf_invoice" filename="pdf_invoice_fname" readonly="True"/>
+                        <field name="xml_invoice_fname" invisible="1"/>
+                        <field name="xml_invoice" filename="xml_invoice_fname" readonly="True"/>
+                        <field name="xml_mh_fname" invisible="1"/>
+                        <field name="xml_mh" filename="xml_mh_fname" readonly="True"/>
+                    </group>
+                </page>
+             </xpath> 
         </field>
+        
     </record>
 </odoo>

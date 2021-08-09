@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!--Nota Débito-->
+    <menuitem id="menu_for_debit_note_invoices" parent="account.menu_finance_receivables"
+    action="debit_note_action" sequence="5"/>
+
     <!-- Factura Electrónica -->
     <menuitem name="Factura Electrónica" id="base_factura_electronica_v14.menu_root" parent="account.menu_finance_configuration"
     sequence="1"/>

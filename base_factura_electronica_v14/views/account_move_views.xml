@@ -36,6 +36,20 @@
                 </page>
              </xpath> 
 
+             <record id="account_invoice_tree_view_tree" model="ir.ui.view">
+                <field name="name">account.invoice.tree.view.tree</field>
+                <field name="model">account.invoice</field>
+                <field name="inherit_id" ref="account.invoice_tree"/>
+                <field name="arch" type="xml">
+                    <field name="number" position="after">
+                        <field name="consecutive" />
+                    </field>
+                    <field name="state" position="after">
+                        <field name="invoice_state" />
+                    </field>
+                </field>
+            </record>
+
              <!-- Debit Note Action-->
             <record id="account.action_invoice_tree1" model="ir.actions.act_window">
             <field name="domain">[('type', '=', 'out_invoice'),('is_debit_note', '=', False)]</field>

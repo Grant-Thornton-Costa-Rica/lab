@@ -5,11 +5,11 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_move_form"/>
         <field name="arch" type="xml">
-            <!-- <xpath expr="//header/button[@name='264']" position="after">
+            <xpath expr="//header/button[@name='264']" position="after">
                 <button name="add_debit_note" type="object" string="Agregar Nota Débito"
                 attrs="{'invisible': ['|', ('type', 'not in', ['out_invoice','in_invoice']), ('state','=','draft')]}"/>
                 <button string="Reprocesar documento" name="resend_document" type="object" attrs="{'invisible':[('invoice_state','not in',['error','invalid','unauthorized'])]}"/>
-            </xpath> -->
+            </xpath>
             <field name="partner_id" position="after">
                 <field name="exits_third_party_other_charger" invisible="True"/>
                 <field name="activity_code_id" domain="[('company_id','=',company_id)]" required="True" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly':[('state','not in',['draft'])]}"/>
